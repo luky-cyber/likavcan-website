@@ -1,0 +1,63 @@
+:root {
+  /* Farby */
+  --color-background: #0d1117;
+  --color-surface: #161b22;
+  --color-surface-light: #21262d;
+
+  --color-text: #f0f3f6;
+  --color-text-muted: #9da7b3;
+
+  --color-primary: #4f8cff;
+  --color-primary-hover: #75a5ff;
+  --color-accent: #55d6be;
+
+  --color-border: rgba(255, 255, 255, 0.12);
+  --color-focus: #8ab4ff;
+
+  /* Typografia */
+  --font-family-base:
+    Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.375rem;
+  --font-size-2xl: 1.75rem;
+  --font-size-3xl: 2.25rem;
+  --font-size-4xl: clamp(2.5rem, 7vw, 4.75rem);
+
+  --line-height-tight: 1.15;
+  --line-height-base: 1.65;
+
+  /* Rozostupy */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+
+  /* Rozmery */
+  --container-width: 1180px;
+  --content-width: 760px;
+  --header-height: 72px;
+
+  /* Rohy */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.875rem;
+  --radius-lg: 1.25rem;
+  --radius-pill: 999px;
+
+  /* Tiene */
+  --shadow-sm: 0 8px 30px rgba(0, 0, 0, 0.16);
+  --shadow-md: 0 20px 60px rgba(0, 0, 0, 0.28);
+
+  /* Prechody */
+  --transition-fast: 160ms ease;
+  --transition-base: 240ms ease;
+}
