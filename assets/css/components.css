@@ -145,3 +145,45 @@
   padding-top: var(--space-4);
   padding-bottom: var(--space-8);
 }
+
+/* Mobilná navigácia */
+@media (max-width: 768px) {
+  .site-header__inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .site-logo {
+    margin: 0;
+    text-align: center;
+  }
+
+  .site-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 0.65rem 1rem;
+    overflow-x: visible;
+  }
+
+  .site-nav a {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    padding: 0.35rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-nav {
+    gap: 0.45rem 0.8rem;
+  }
+
+  .site-nav a {
+    font-size: 0.9rem;
+  }
+}
