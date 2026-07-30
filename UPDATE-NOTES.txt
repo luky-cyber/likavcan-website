@@ -1,0 +1,15 @@
+Updates included in this package:
+
+1. Unified main header navigation across SK / EN / DE pages.
+2. Added second-level profile navigation for Lukas, Peter and Publications pages.
+3. Publications are now positioned as a subsection of the Lukas profile.
+4. Added hidden future pages for Bezpecna elektrika in SK / EN / DE (not linked from navigation).
+5. Added transparent Bezpecna elektrika logo in assets/img/bezpecna-elektrika-logo.png.
+6. Added a multilingual cookie consent banner handled by assets/js/main.js.
+
+Hidden future pages:
+- /bezpecna-elektrika/
+- /en/bezpecna-elektrika/
+- /de/bezpecna-elektrika/
+
+7. Added a disabled future Bezpecna elektrika item to the Lukas profile subnavigation in SK / EN / DE. It already contains the final domain URL; activation only requires removing aria-disabled, tabindex and onclick attributes.

@@ -48,36 +48,37 @@
         Likavcan.cz
       </a>
 
-      <nav class="site-nav" aria-label="Navigácia publikácií">
-        <a href="../index.html">Domov</a>
-        <a href="../lukas/">Lukáš</a>
-        <a href="#articles">Články</a>
-        <a href="#conferences">Konferencie</a>
-        <a href="#books">Učebnice</a>
-        <a href="./" aria-current="page">Publikácie</a>
-        <a href="../peter/">Peter</a>
-
-        <a
-          href="./"
-          lang="sk"
-          hreflang="sk"
-          aria-current="page"
-          aria-label="Slovenská verzia"
-        >
-          SK
-        </a>
-
-        <a
-          href="../en/publications/"
-          lang="en"
-          hreflang="en"
-          aria-label="Anglická verzia"
-        >
-          EN
-        </a>
-      </nav>
+      <nav class="site-nav" aria-label="Hlavná navigácia">
+  <a href="../index.html">Domov</a>
+  <a href="../lukas/" aria-current="page">Lukáš</a>
+  <a href="../peter/">Peter</a>
+  <a href="./" lang="sk" hreflang="sk" aria-current="page" aria-label="Slovenská verzia">SK</a>
+  <a href="../en/publications/" lang="en" hreflang="en" aria-label="Anglická verzia">EN</a>
+  <a href="../de/publications/" lang="de" hreflang="de" aria-label="Nemecká verzia">DE</a>
+</nav>
     </div>
   </header>
+
+  <nav class="profile-nav" aria-label="Sekcie profilu Lukáš">
+  <div class="container profile-nav__inner">
+    <a href="../lukas/#profile">Profil</a>
+    <a href="../lukas/#experience">Kariéra</a>
+    <a href="../lukas/#education">Vzdelanie</a>
+    <a href="../lukas/#expertise">Odborné oblasti</a>
+    <a href="./" aria-current="page">Publikácie</a>
+    <!-- Budúci odkaz: odstráň aria-disabled, tabindex a onclick, keď bude web aktívny. -->
+    <a
+      class="profile-nav__future"
+      href="https://www.bezpecnaelektrika.sk"
+      aria-disabled="true"
+      tabindex="-1"
+      title="Pripravovaný odkaz na stránku Bezpečná elektrika"
+      onclick="return false;"
+    >
+      Bezpečná elektrika
+    </a>
+  </div>
+</nav>
 
   <main class="site-main">
     <section class="section section--large">
