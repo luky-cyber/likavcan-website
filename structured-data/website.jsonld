@@ -1,0 +1,13 @@
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://likavcan.cz/#website",
+  "url": "https://likavcan.cz/",
+  "name": "Likavcan.cz",
+  "inLanguage": [
+    "sk",
+    "en",
+    "de"
+  ],
+  "description": "Multilingual professional profiles of Lukáš Likavčan and Peter Likavčan."
+}

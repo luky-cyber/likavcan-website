@@ -1,0 +1,12 @@
+SEO update – 2026-08-02
+
+- Embedded ProfilePage/Person JSON-LD in all SK/EN/DE Lukáš and Peter profile pages.
+- Preserved supplied professional details, credentials, sameAs links and expertise.
+- Updated all structured-data URLs to https://likavcan.cz/.
+- Added localized ProfilePage names, descriptions and inLanguage values.
+- Removed duplicate canonical links.
+- Added missing German hreflang to Slovak publications page.
+- Populated structured-data/lukas.jsonld, peter.jsonld and website.jsonld.
+- Created production sitemap.xml and robots.txt.
+- Added CNAME file containing likavcan.cz.
+- Hidden Bezpečná elektrika preparation pages are intentionally excluded from sitemap until launch.
