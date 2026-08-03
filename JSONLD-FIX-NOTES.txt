@@ -1,0 +1,12 @@
+Likavcan.cz v0.1.2 structured data validation fix
+
+Changed files:
+- lukas/index.html
+- peter/index.html
+- en/lukas/index.html
+- en/peter/index.html
+- de/lukas/index.html
+- de/peter/index.html
+
+Change:
+Removed optional dateCreated and dateModified properties from ProfilePage JSON-LD because Google Search Console required DateTime values and reported the date-only values as non-critical validation warnings.
