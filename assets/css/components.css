@@ -347,3 +347,33 @@ html[lang="en"] .profile-nav a.profile-nav__future[aria-disabled="true"]::after 
 html[lang="de"] .profile-nav a.profile-nav__future[aria-disabled="true"]::after {
   content: " · in Vorbereitung";
 }
+
+.cookie-settings-button {
+  position: fixed;
+  left: 1rem;
+  bottom: 1rem;
+  z-index: 1100;
+  padding: 0.55rem 0.8rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: rgba(17, 24, 39, 0.92);
+  color: var(--color-text-muted);
+  font: inherit;
+  font-size: var(--font-size-xs);
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+  backdrop-filter: blur(10px);
+}
+
+.cookie-settings-button:hover,
+.cookie-settings-button:focus-visible {
+  color: var(--color-text);
+  border-color: rgba(79, 140, 255, 0.5);
+}
+
+@media (max-width: 768px) {
+  .cookie-settings-button {
+    left: 0.75rem;
+    bottom: 0.75rem;
+  }
+}
