@@ -1,13 +1,18 @@
 {
   "@context": "https://schema.org",
-  "@type": "WebSite",
-  "@id": "https://likavcan.cz/#website",
-  "url": "https://likavcan.cz/",
-  "name": "Likavcan.cz",
-  "inLanguage": [
-    "sk",
-    "en",
-    "de"
-  ],
-  "description": "Multilingual professional profiles of Lukáš Likavčan and Peter Likavčan."
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://likavcan.cz/#website",
+      "url": "https://likavcan.cz/",
+      "name": "Likavcan.cz"
+    },
+    {
+      "@type": "CollegeOrUniversity",
+      "@id": "https://likavcan.cz/#mtf-stu",
+      "name": "Faculty of Materials Science and Technology in Trnava, Slovak University of Technology in Bratislava",
+      "alternateName": "MTF STU",
+      "url": "https://www.mtf.stuba.sk/"
+    }
+  ]
 }

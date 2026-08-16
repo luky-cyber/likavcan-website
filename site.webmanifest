@@ -1,0 +1,17 @@
+{
+  "name": "Likavcan.cz",
+  "short_name": "Likavcan.cz",
+  "description": "Professional identity hub for Lukáš Likavčan and Peter Likavčan.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0d1117",
+  "theme_color": "#0d1117",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32 48x48",
+      "type": "image/x-icon"
+    }
+  ]
+}

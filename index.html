@@ -44,6 +44,53 @@
     href="https://likavcan.cz/"
 >
 
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://likavcan.cz/#website",
+      "url": "https://likavcan.cz/",
+      "name": "Likavcan.cz"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://likavcan.cz/#webpage",
+      "url": "https://likavcan.cz/",
+      "name": "Likavcan.cz – professional profiles of Lukáš Likavčan and Peter Likavčan",
+      "inLanguage": "sk",
+      "isPartOf": {
+        "@id": "https://likavcan.cz/#website"
+      },
+      "about": [
+        {
+          "@id": "https://likavcan.cz/lukas/#lukas-likavcan"
+        },
+        {
+          "@id": "https://likavcan.cz/peter/#peter-likavcan"
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://likavcan.cz/lukas/#lukas-likavcan",
+      "name": "Lukáš Likavčan",
+      "url": "https://likavcan.cz/lukas/",
+      "image": "https://likavcan.cz/assets/img/profiles/lukas-likavcan.webp"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://likavcan.cz/peter/#peter-likavcan",
+      "name": "Peter Likavčan",
+      "url": "https://likavcan.cz/peter/",
+      "image": "https://likavcan.cz/assets/img/profiles/peter-likavcan.webp"
+    }
+  ]
+}
+</script>
+  <link rel="alternate" type="application/atom+xml" title="Likavcan.cz updates" href="https://likavcan.cz/feed.xml">
 </head>
 
 <body>
@@ -109,6 +156,10 @@
             Lukáša Likavčana a Petra Likavčana.
           </p>
 
+          <p class="hero__context">
+            Likavcan.cz predstavuje profesijné profily dvoch absolventov Materiálovotechnologickej fakulty STU – materiálového inžiniera Lukáša Likavčana a špecialistu na priemyselné simulácie Petra Likavčana.
+          </p>
+
           <div class="button-group">
             <a
               class="button button--primary"
@@ -132,6 +183,10 @@
       <div class="container">
         <div class="grid grid--2">
           <article class="card">
+            <picture>
+              <source srcset="assets/img/profiles/lukas-likavcan.webp" type="image/webp">
+              <img class="profile-card__portrait" src="assets/img/profiles/lukas-likavcan.jpg" alt="Portrét Lukáša Likavčana" width="1000" height="1000" loading="lazy" decoding="async">
+            </picture>
             <span class="badge">
               Profesijný profil
             </span>
@@ -141,9 +196,7 @@
             </h2>
 
             <p class="card__text">
-              Profesijný profil zameraný na materiálový výskum,
-              polymérne technológie, priemyselné inžinierstvo,
-              zváranie plastov a numerické simulácie.
+              Materiálový inžinier a R&D špecialista, absolvent MTF STU v Trnave; polyméry, kompozity, vstrekovanie plastov, spájanie polymérov a numerické simulácie.
             </p>
 
             <div class="button-group">
@@ -157,6 +210,10 @@
           </article>
 
           <article class="card">
+            <picture>
+              <source srcset="assets/img/profiles/peter-likavcan.webp" type="image/webp">
+              <img class="profile-card__portrait" src="assets/img/profiles/peter-likavcan.jpg" alt="Portrét Petra Likavčana" width="1000" height="1000" loading="lazy" decoding="async">
+            </picture>
             <span class="badge">
               Profesijný profil
             </span>
@@ -166,8 +223,7 @@
             </h2>
 
             <p class="card__text">
-              Samostatný profesionálny profil pripravený na doplnenie
-              odborných skúseností, projektov, kariéry a ďalšieho obsahu.
+              Simulation Specialist a špecialista na priemyselnú automatizáciu, robotické simulácie, Process Simulate a Virtual Commissioning; absolvent MTF STU v Trnave.
             </p>
 
             <div class="button-group">

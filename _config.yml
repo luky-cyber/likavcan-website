@@ -1,0 +1,26 @@
+# GitHub Pages / Jekyll production exclusions
+# Repository documentation remains versioned but is not emitted into the public site.
+exclude:
+  - ENTITY-AUTHORITY-UPDATE-v0.1.4.md
+  - DIGITAL-AUTHORITY-UPDATE-v0.1.4.md
+  - docs
+  - structured-data
+  - README.md
+  - LICENSE
+  - TODO.md
+  - DIGITAL-IDENTITY-PHOTOS-UPDATE.md
+  - ENTITY-IDENTITY-UPDATE.md
+  - GA4-CONSENT-NOTES.txt
+  - JSONLD-FIX-NOTES.txt
+  - SEO-UPDATE-NOTES.txt
+  - UPDATE-NOTES.txt
+  - RELEASE-v0.1.4-UPRAVENA.md
+  - certificates
+  - projects
+  - PRODUCTION-AUDIT-v0.1.4.md
+  - DISAMBIGUATION-ENHANCED-v0.1.4.md
+  - FINAL-HOMEPAGE-IDENTITY-POLISH-v0.1.4.md
+  - IDENTITY-NOTE-PATCH-v0.1.4.md
+  - FINAL-PRODUCTION-CORRECTIONS-v0.1.4.md
+  - FINAL-PUBLISH-AUDIT-v0.1.4.md
+  - PORTRAIT-AND-REFERENCES-POLISH-v0.1.4.md

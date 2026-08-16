@@ -40,6 +40,53 @@
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="manifest" href="../site.webmanifest">
   <link rel="icon" href="../favicon.ico">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://likavcan.cz/#website",
+      "url": "https://likavcan.cz/",
+      "name": "Likavcan.cz"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://likavcan.cz/en/#webpage",
+      "url": "https://likavcan.cz/en/",
+      "name": "Likavcan.cz – professional profiles of Lukáš Likavčan and Peter Likavčan",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://likavcan.cz/#website"
+      },
+      "about": [
+        {
+          "@id": "https://likavcan.cz/lukas/#lukas-likavcan"
+        },
+        {
+          "@id": "https://likavcan.cz/peter/#peter-likavcan"
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://likavcan.cz/lukas/#lukas-likavcan",
+      "name": "Lukáš Likavčan",
+      "url": "https://likavcan.cz/lukas/",
+      "image": "https://likavcan.cz/assets/img/profiles/lukas-likavcan.webp"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://likavcan.cz/peter/#peter-likavcan",
+      "name": "Peter Likavčan",
+      "url": "https://likavcan.cz/peter/",
+      "image": "https://likavcan.cz/assets/img/profiles/peter-likavcan.webp"
+    }
+  ]
+}
+</script>
+  <link rel="alternate" type="application/atom+xml" title="Likavcan.cz updates" href="https://likavcan.cz/feed.xml">
 </head>
 
 <body>
@@ -105,6 +152,10 @@
             of Lukáš Likavčan and Peter Likavčan.
           </p>
 
+          <p class="hero__context">
+            Likavcan.cz presents the professional profiles of two graduates of the Faculty of Materials Science and Technology at STU – materials engineer Lukáš Likavčan and industrial simulation specialist Peter Likavčan.
+          </p>
+
           <div class="button-group">
             <a
               class="button button--primary"
@@ -128,6 +179,10 @@
       <div class="container">
         <div class="grid grid--2">
           <article class="card">
+            <picture>
+              <source srcset="../assets/img/profiles/lukas-likavcan.webp" type="image/webp">
+              <img class="profile-card__portrait" src="../assets/img/profiles/lukas-likavcan.jpg" alt="Portrait of Lukáš Likavčan" width="1000" height="1000" loading="lazy" decoding="async">
+            </picture>
             <span class="badge">
               Professional profile
             </span>
@@ -153,6 +208,10 @@
           </article>
 
           <article class="card">
+            <picture>
+              <source srcset="../assets/img/profiles/peter-likavcan.webp" type="image/webp">
+              <img class="profile-card__portrait" src="../assets/img/profiles/peter-likavcan.jpg" alt="Portrait of Peter Likavčan" width="1000" height="1000" loading="lazy" decoding="async">
+            </picture>
             <span class="badge">
               Professional profile
             </span>

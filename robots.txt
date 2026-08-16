@@ -1,4 +1,22 @@
+# Public professional identity hub. Crawling is intentionally allowed.
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
 User-agent: *
 Allow: /
 
 Sitemap: https://likavcan.cz/sitemap.xml
+Sitemap: https://likavcan.cz/feed.xml
