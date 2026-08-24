@@ -1,0 +1,30 @@
+# Likavcan.cz
+
+> Professional identity website for Lukáš Likavčan and Peter Likavčan. The site provides stable person identifiers, professional profiles, academic references and selected publications.
+
+## People
+
+### Lukáš Likavčan
+- Profile: https://likavcan.cz/lukas/
+- Stable entity ID: https://likavcan.cz/lukas/#lukas-likavcan
+- Focus: materials engineering, polymers, composites, injection moulding, plastics joining, numerical simulation and CAE
+- Publications: https://likavcan.cz/publications/
+- Independent professional project: https://bezpecnaelektrika.sk/
+- Project entity ID: https://bezpecnaelektrika.sk/#project
+
+### Peter Likavčan
+- Profile: https://likavcan.cz/peter/
+- Stable entity ID: https://likavcan.cz/peter/#peter-likavcan
+- Focus: industrial simulation, industrial automation, robotics, Process Simulate, Virtual Commissioning and Digital Factory
+
+## Language versions
+- Slovak: https://likavcan.cz/
+- English: https://likavcan.cz/en/
+- German: https://likavcan.cz/de/
+
+## Machine-readable discovery
+- Sitemap: https://likavcan.cz/sitemap.xml
+- Atom feed: https://likavcan.cz/feed.xml
+
+## Entity relationship
+Bezpečná elektrika is a separate professional project founded by Lukáš Likavčan. It is not a sameAs identity for the person. Regulated E2A inspection services are described as being in preparation.

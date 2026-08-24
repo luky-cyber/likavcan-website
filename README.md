@@ -93,3 +93,6 @@ Ing. Lukáš Likavčan, PhD.
 Started
 
 2026
+## Current release
+
+v0.1.5 — Project & AI Discovery: links the Lukáš Likavčan identity to the independent Bezpečná elektrika project and adds a concise AI/search discovery layer.

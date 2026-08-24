@@ -352,26 +352,10 @@
 }
 
 
-.profile-nav a.profile-nav__future[aria-disabled="true"] {
-  color: var(--color-text-muted);
-  cursor: default;
-  opacity: 0.62;
-  pointer-events: none;
-}
-
-.profile-nav a.profile-nav__future[aria-disabled="true"]::after {
-  content: " · pripravuje sa";
+.profile-nav a.profile-nav__external::after {
+  content: " ↗";
   font-size: var(--font-size-xs);
-  font-weight: 500;
-  opacity: 0.8;
-}
-
-html[lang="en"] .profile-nav a.profile-nav__future[aria-disabled="true"]::after {
-  content: " · coming soon";
-}
-
-html[lang="de"] .profile-nav a.profile-nav__future[aria-disabled="true"]::after {
-  content: " · in Vorbereitung";
+  opacity: 0.72;
 }
 
 .cookie-settings-button {
@@ -437,6 +421,22 @@ html[lang="de"] .profile-nav a.profile-nav__future[aria-disabled="true"]::after 
   background: var(--color-surface);
 }
 
+
+.profile-card__project {
+  margin-top: 0.85rem;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.profile-card__project a {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.project-card__actions {
+  margin-top: 1.1rem;
+}
+
 .profile-card__portrait {
   display: block;
   width: 132px;
@@ -478,7 +478,22 @@ html[lang="de"] .profile-nav a.profile-nav__future[aria-disabled="true"]::after 
     width: 200px;
   }
 
-  .profile-card__portrait {
+.profile-card__project {
+  margin-top: 0.85rem;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.profile-card__project a {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.project-card__actions {
+  margin-top: 1.1rem;
+}
+
+.profile-card__portrait {
     width: 112px;
     height: 112px;
   }

@@ -1,29 +1,31 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Likavcan.cz updates</title>
   <id>https://likavcan.cz/</id>
-  <link href="https://likavcan.cz/feed.xml" rel="self" type="application/atom+xml"/>
-  <link href="https://likavcan.cz/" rel="alternate" type="text/html"/>
-  <updated>2026-08-16T13:03:00+02:00</updated>
-  <author><name>Likavcan.cz</name></author>
+  <link href="https://likavcan.cz/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://likavcan.cz/" rel="alternate" type="text/html" />
+  <updated>2026-08-24T13:30:00Z</updated>
+  <author>
+    <name>Likavcan.cz</name>
+  </author>
   <entry>
     <title>Lukáš Likavčan – professional profile</title>
     <id>https://likavcan.cz/lukas/</id>
-    <link href="https://likavcan.cz/lukas/"/>
-    <updated>2026-08-16T13:03:00+02:00</updated>
-    <summary>Professional identity profile of Lukáš Likavčan, materials engineer and R&amp;D specialist.</summary>
+    <link href="https://likavcan.cz/lukas/" />
+    <updated>2026-08-24T13:30:00Z</updated>
+    <summary>Professional identity profile of Lukáš Likavčan, materials engineer and R&amp;D specialist, including the independent Bezpečná elektrika professional project.</summary>
   </entry>
   <entry>
     <title>Peter Likavčan – professional profile</title>
     <id>https://likavcan.cz/peter/</id>
-    <link href="https://likavcan.cz/peter/"/>
+    <link href="https://likavcan.cz/peter/" />
     <updated>2026-08-16T13:03:00+02:00</updated>
     <summary>Professional identity profile of Peter Likavčan, industrial simulation and automation specialist.</summary>
   </entry>
   <entry>
     <title>Publications – Lukáš Likavčan</title>
     <id>https://likavcan.cz/publications/</id>
-    <link href="https://likavcan.cz/publications/"/>
+    <link href="https://likavcan.cz/publications/" />
     <updated>2026-08-16T13:03:00+02:00</updated>
     <summary>Selected scholarly publications and publication references associated with Lukáš Likavčan.</summary>
   </entry>

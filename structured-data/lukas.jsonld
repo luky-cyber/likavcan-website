@@ -85,7 +85,13 @@
         "Ultrasonic welding",
         "Laser welding",
         "Numerical simulation",
-        "CAE"
+        "CAE",
+        "Electrical safety",
+        "Electrical installations",
+        "Electrical inspection and testing",
+        "Electrical measurements",
+        "Residual current protection",
+        "Lightning protection systems"
       ],
       "hasCredential": [
         {
@@ -157,6 +163,16 @@
       "sameAs": [
         "https://sk.linkedin.com/company/bizzcom-s-r-o-"
       ]
+    },
+    {
+      "@type": "Project",
+      "@id": "https://bezpecnaelektrika.sk/#project",
+      "name": "Bezpečná elektrika",
+      "url": "https://bezpecnaelektrika.sk/",
+      "founder": {
+        "@id": "https://likavcan.cz/lukas/#lukas-likavcan"
+      },
+      "description": "Professional project focused on electrical safety, measurements and clear explanations of technical context. Regulated E2A inspection services are in preparation."
     }
   ]
 }
