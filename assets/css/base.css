@@ -83,3 +83,10 @@ ol {
   outline: 3px solid var(--color-focus);
   outline-offset: 3px;
 }
+html {
+  scroll-padding-top: var(--scroll-offset, 96px);
+}
+
+main section[id] {
+  scroll-margin-top: var(--scroll-offset, 96px);
+}

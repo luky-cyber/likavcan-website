@@ -1,0 +1,340 @@
+{
+  "version": "v0.2.0-rc2",
+  "normalized_on": "2026-08-30",
+  "policy": "Bibliographic facts are canonical across SK/EN/DE. Localized pages may translate labels and selected titles, but authorship, year, venue, volume/issue, pagination, DOI/ISBN and work identity must not diverge.",
+  "journals": [
+    {
+      "key": "estimation",
+      "year": 2017,
+      "title": "Estimation of Fibre Orientation in Injection Moulding Plastics Parts",
+      "authors": [
+        "Maroš Martinkovič",
+        "Lukáš Likavčan"
+      ],
+      "journal": "Materials Science Forum",
+      "volume": "891",
+      "issue": null,
+      "pages": "55–59",
+      "doi": "10.4028/www.scientific.net/MSF.891.55",
+      "source": "https://www.scientific.net/MSF.891.55"
+    },
+    {
+      "key": "comparison",
+      "year": 2016,
+      "title": "Comparison of Fibre Orientation Using Simulation Software and Materialography",
+      "authors": [
+        "Lukáš Likavčan",
+        "Maroš Martinkovič"
+      ],
+      "journal": "Acta Technica Corviniensis – Bulletin of Engineering",
+      "volume": "9",
+      "issue": "1",
+      "pages": "71–77",
+      "doi": null,
+      "source": "https://acta.fih.upt.ro/pdf/archive/ACTA-2016-1.pdf"
+    },
+    {
+      "key": "design",
+      "year": 2016,
+      "title": "Design and Production of the Injection Mould with a CAX Assistance",
+      "authors": [
+        "Lukáš Likavčan",
+        "Martin Frnčík",
+        "Rudolf Zaujec",
+        "Lukáš Satin",
+        "Maroš Martinkovič"
+      ],
+      "journal": "Research Papers Faculty of Materials Science and Technology, Slovak University of Technology",
+      "volume": "24",
+      "issue": "38",
+      "pages": "17–26",
+      "doi": "10.1515/rput-2016-0034",
+      "source": "https://doi.org/10.1515/rput-2016-0034"
+    },
+    {
+      "key": "mathematical",
+      "year": 2016,
+      "title": "Mathematical Modeling of Filled Polypropylene by Modified Cross Model",
+      "authors": [
+        "Lukáš Likavčan",
+        "Maroš Martinkovič"
+      ],
+      "journal": "Acta Technica Corviniensis – Bulletin of Engineering",
+      "volume": "9",
+      "issue": "4",
+      "pages": "35–38",
+      "doi": null,
+      "source": "https://acta.fih.upt.ro/pdf/archive/ACTA-2016-4.pdf"
+    },
+    {
+      "key": "sodium",
+      "year": 2016,
+      "title": "Using Sodium Hydrogen Carbonate for Foaming Polymers",
+      "authors": [
+        "Lukáš Satin",
+        "Lukáš Likavčan",
+        "Miroslav Košík",
+        "Peter Rantuch",
+        "Jozef Bílik"
+      ],
+      "journal": "Research Papers Faculty of Materials Science and Technology, Slovak University of Technology",
+      "volume": "24",
+      "issue": "38",
+      "pages": "35–41",
+      "doi": "10.1515/rput-2016-0036",
+      "source": "https://doi.org/10.1515/rput-2016-0036"
+    },
+    {
+      "key": "meshes",
+      "year": 2015,
+      "title": "Differences of Numerical Analysis Results Based on Varied Types of Meshes",
+      "authors": [
+        "Miroslav Košík",
+        "Lukáš Likavčan",
+        "Jozef Bílik",
+        "Tomáš Štefko"
+      ],
+      "journal": "Technológ",
+      "volume": "7",
+      "issue": "4",
+      "pages": "18–23",
+      "doi": null,
+      "source": "https://www.mtf.stuba.sk/buxus/docs/UBEI/publikacie/UIBE_Publikacie_2015.pdf"
+    },
+    {
+      "key": "viscosity",
+      "year": 2014,
+      "title": "Determination of Apparent Viscosity as Function of Shear Rate and Fibres Fraction in Polypropylene",
+      "authors": [
+        "Lukáš Likavčan",
+        "Miroslav Košík",
+        "Jozef Bílik",
+        "Maroš Martinkovič"
+      ],
+      "journal": "International Journal of Engineering and Innovative Technology",
+      "volume": "4",
+      "issue": "5",
+      "pages": "23–26",
+      "doi": null,
+      "source": "https://www.ijeit.com/Vol%204/Issue%205/IJEIT1412201411_05.pdf"
+    },
+    {
+      "key": "silver",
+      "year": 2014,
+      "title": "Silver Streaks on Surface of Injected Thermoplastic Parts",
+      "authors": [
+        "Jozef Bílik",
+        "Antonín Náplava",
+        "Martin Kusý",
+        "Miroslav Košík",
+        "Lukáš Likavčan"
+      ],
+      "journal": "Research Papers Faculty of Materials Science and Technology, Slovak University of Technology",
+      "volume": "22",
+      "issue": "34",
+      "pages": "21–27",
+      "doi": "10.2478/rput-2014-0023",
+      "source": "https://doi.org/10.2478/rput-2014-0023"
+    },
+    {
+      "key": "ways",
+      "year": 2014,
+      "title": "Ways of Comparation of the Fibre Orientation in Injection Moulding Parts",
+      "authors": [
+        "Lukáš Likavčan",
+        "Maroš Martinkovič",
+        "Jozef Bílik",
+        "Miroslav Košík"
+      ],
+      "journal": "Research Papers Faculty of Materials Science and Technology, Slovak University of Technology",
+      "volume": "22",
+      "issue": "Special Number",
+      "pages": "109–114",
+      "doi": "10.2478/rput-2014-0016",
+      "source": "https://doi.org/10.2478/rput-2014-0016"
+    },
+    {
+      "key": "possibilities",
+      "year": 2013,
+      "title": "Possibilities of Evaluation of the Fibre Orientation in Injection Moulding Parts",
+      "authors": [
+        "Maroš Martinkovič",
+        "Lukáš Likavčan"
+      ],
+      "journal": "Technological Engineering",
+      "volume": "10",
+      "issue": "2",
+      "pages": "26–28",
+      "doi": "10.2478/teen-2013-0018",
+      "source": "https://www.mtf.stuba.sk/buxus/docs/UMAT/publikacie/publikacna_cinnost_UMAT_2013.pdf"
+    },
+    {
+      "key": "diesel",
+      "year": 2014,
+      "title": "Diesel Effect Problem Solving During Injection Moulding",
+      "authors": [
+        "Miroslav Košík",
+        "Lukáš Likavčan",
+        "Jozef Bílik",
+        "Maroš Martinkovič"
+      ],
+      "journal": "Research Papers Faculty of Materials Science and Technology, Slovak University of Technology",
+      "volume": "22",
+      "issue": "Special Number",
+      "pages": "97–102",
+      "doi": "10.2478/rput-2014-0014",
+      "source": "https://doi.org/10.2478/rput-2014-0014"
+    }
+  ],
+  "conferences": [
+    {
+      "key": "conf-estimation",
+      "year": 2016,
+      "title_sk": "Estimation of Fibre Orientation in Injection Moulding Plastics Parts",
+      "title_en": "Estimation of Fibre Orientation in Injection Moulding Plastics Parts",
+      "title_de": "Estimation of Fibre Orientation in Injection Moulding Plastics Parts",
+      "authors": [
+        "Maroš Martinkovič",
+        "Lukáš Likavčan"
+      ],
+      "venue": "Metallography ’16",
+      "place": "Košice",
+      "pages": "69",
+      "isbn": "978-80-553-2547-7"
+    },
+    {
+      "key": "conf-cax",
+      "year": 2016,
+      "title_sk": "Návrh a výroba vstrekovacej formy s CAX asistenciou",
+      "title_en": "Design and Production of an Injection Mould with CAX Assistance",
+      "title_de": "Design and Production of an Injection Mould with CAX Assistance",
+      "authors": [
+        "Lukáš Satin",
+        "Rudolf Zaujec",
+        "Lukáš Likavčan",
+        "Miroslav Košík"
+      ],
+      "venue": "Centrum excelentnosti 5-osového obrábania",
+      "venue_en": "Centre of Excellence for Five-Axis Machining",
+      "place": "Trnava: AlumniPress",
+      "pages": "133–139",
+      "isbn": "978-80-8096-236-4"
+    },
+    {
+      "key": "conf-diesel",
+      "year": 2014,
+      "title_sk": "Diesel Effect Problem Solving During Injection Moulding",
+      "title_en": "Diesel Effect Problem Solving During Injection Moulding",
+      "title_de": "Diesel Effect Problem Solving During Injection Moulding",
+      "authors": [
+        "Miroslav Košík",
+        "Lukáš Likavčan",
+        "Jozef Bílik",
+        "Maroš Martinkovič"
+      ],
+      "venue": "International Doctoral Seminar 2014",
+      "place": "Zielona Góra",
+      "pages": "98–103",
+      "isbn": "978-80-8096-195-4"
+    },
+    {
+      "key": "conf-simulation",
+      "year": 2014,
+      "title_sk": "Possibilities of Simulation of Injection Moulding Parts",
+      "title_en": "Possibilities of Simulation of Injection Moulding Parts",
+      "title_de": "Possibilities of Simulation of Injection Moulding Parts",
+      "authors": [
+        "Lukáš Likavčan"
+      ],
+      "venue": "Rozvoj a uplatňovanie akademických kompetencií doktorandov technických vied",
+      "venue_en": "Rozvoj a uplatňovanie akademických kompetencií doktorandov technických vied",
+      "place": "Trnava",
+      "pages": "91–92",
+      "isbn": "978-80-8143-144-9"
+    },
+    {
+      "key": "conf-ways",
+      "year": 2014,
+      "title_sk": "Ways of Comparation of the Fibre Orientation in Injection Moulding Parts",
+      "title_en": "Ways of Comparation of the Fibre Orientation in Injection Moulding Parts",
+      "title_de": "Ways of Comparation of the Fibre Orientation in Injection Moulding Parts",
+      "authors": [
+        "Maroš Martinkovič",
+        "Lukáš Likavčan",
+        "Jozef Bílik",
+        "Miroslav Košík"
+      ],
+      "venue": "International Doctoral Seminar 2014",
+      "place": "Zielona Góra",
+      "pages": "117–123",
+      "isbn": "978-80-8096-195-4"
+    }
+  ],
+  "books": [
+    {
+      "year": 2023,
+      "title_sk": "Teória a technológia spracovania plastov: Rozumieme spracovaniu plastov",
+      "title_en": "Theory and Technology of Plastics Processing: Understanding Plastics Processing",
+      "title_de": "Theorie und Technologie der Kunststoffverarbeitung: Kunststoffverarbeitung verstehen",
+      "authors": [
+        "Jozef Bílik",
+        "Antonín Náplava",
+        "Ján Milde",
+        "Roland Šuba",
+        "Lukáš Likavčan"
+      ],
+      "pages": "219",
+      "isbn": "978-80-8096-296-8"
+    },
+    {
+      "year": 2021,
+      "title_sk": "Teória a technológia spracovania plastov: Návody na cvičenia",
+      "title_en": "Theory and Technology of Plastics Processing: Laboratory and Exercise Manual",
+      "title_de": "Theorie und Technologie der Kunststoffverarbeitung: Anleitungen für Übungen",
+      "authors": [
+        "Jozef Bílik",
+        "Antonín Náplava",
+        "Ján Milde",
+        "Miroslav Košík",
+        "Lukáš Likavčan"
+      ],
+      "pages": "138",
+      "isbn": "978-80-8096-281-4"
+    }
+  ],
+  "theses": [
+    {
+      "year": 2017,
+      "title_sk": "Skúmanie vplyvu parametrov technologického procesu vstrekovania na vlastnosti výstrekov z termoplastov spevnených krátkymi vláknami",
+      "title_en": "Investigation of the Influence of Injection Moulding Process Parameters on the Properties of Short-Fibre Reinforced Thermoplastic Mouldings",
+      "title_de": "Untersuchung des Einflusses der Prozessparameter beim Spritzgießen auf die Eigenschaften kurzfaserverstärkter thermoplastischer Formteile",
+      "supervisor": "Maroš Martinkovič",
+      "pages": "128",
+      "kind_sk": "dizertačná práca",
+      "kind_en": "Doctoral dissertation",
+      "kind_de": "Dissertation"
+    },
+    {
+      "year": 2013,
+      "title_sk": "Návrh CAPP systému pre elektroerozívne rezanie",
+      "title_en": "Design of a CAPP System for Electrical Discharge Machining",
+      "title_de": "Entwurf eines CAPP-Systems für das Funkenerodieren",
+      "supervisor": "Martin Necpal",
+      "pages": null,
+      "kind_sk": "diplomová práca",
+      "kind_en": "Master’s thesis",
+      "kind_de": "Diplomarbeit"
+    },
+    {
+      "year": 2011,
+      "title_sk": "Možnosti skenovanie valcových súčiastok optickým 3D skenerom",
+      "title_en": "Possibilities of Scanning Cylindrical Components Using an Optical 3D Scanner",
+      "title_de": "Möglichkeiten zur Erfassung zylindrischer Bauteile mit einem optischen 3D-Scanner",
+      "supervisor": "Ivan Buranský",
+      "pages": "38",
+      "kind_sk": "bakalárska práca",
+      "kind_en": "Bachelor’s thesis",
+      "kind_de": "Bachelorarbeit"
+    }
+  ]
+}

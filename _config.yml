@@ -15,8 +15,6 @@ exclude:
   - SEO-UPDATE-NOTES.txt
   - UPDATE-NOTES.txt
   - RELEASE-v0.1.4-UPRAVENA.md
-  - certificates
-  - projects
   - PRODUCTION-AUDIT-v0.1.4.md
   - DISAMBIGUATION-ENHANCED-v0.1.4.md
   - FINAL-HOMEPAGE-IDENTITY-POLISH-v0.1.4.md
@@ -27,3 +25,10 @@ exclude:
   - RELEASE-v0.1.5.md
   - PROJECT-AI-DISCOVERY-v0.1.5.md
   - FINAL-AUDIT-v0.1.5.md
+
+  - RELEASE-v0.1.6.md
+  - IDENTITY-DISCOVERY-POLISH-v0.1.6.md
+  - FINAL-AUDIT-v0.1.6.md
+  - RELEASE-v0.2.0.md
+  - LUKAS-FIRST-PROOF-OF-WORK-v0.2.0.md
+  - FINAL-AUDIT-v0.2.0.md

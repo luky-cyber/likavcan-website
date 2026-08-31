@@ -43,7 +43,7 @@ To present reliable, evidence-based engineering knowledge while building a stron
 - HTML5
 - CSS3
 - JavaScript
-- Cloudflare Pages
+- GitHub Pages
 - Cloudflare DNS
 - GitHub
 - Google Search Console
@@ -60,9 +60,9 @@ https://likavcan.cz
 
 ## Current Status
 
-Version 0.1
+**v0.2.0 publish-ready — Lukáš First & Materials Proof of Work**
 
-Foundation completed.
+The release package has passed the final static/runtime review. Production remains on the previous release until deployment is completed.
 
 ---
 
@@ -95,4 +95,4 @@ Started
 2026
 ## Current release
 
-v0.1.5 — Project & AI Discovery: links the Lukáš Likavčan identity to the independent Bezpečná elektrika project and adds a concise AI/search discovery layer.
+v0.2.0 — Lukáš First & Materials Proof of Work: uses a minimalist Lukáš-first identity/contact homepage with a related Peter profile, adds real Materials/R&D and Bezpečná elektrika case studies, normalizes publication evidence, improves context-aware navigation/contact, strengthens privacy/analytics controls and keeps the established entity architecture stable.

@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+PRODID:-//Likavcan.cz//Professional vCard 3.0//EN
+FN;CHARSET=utf-8:Ing. Peter Likavčan
+N;CHARSET=utf-8:Likavčan;Peter;;Ing.;
+TITLE;CHARSET=utf-8:Simulation Specialist and CAE Engineer
+URL;TYPE=WORK:https://likavcan.cz/peter/
+URL:https://www.linkedin.com/in/peter-likavcan-7a287a12b
+NOTE;CHARSET=utf-8:Simulation specialist and CAE engineer. Professional identity profile at Likavcan.cz.
+END:VCARD

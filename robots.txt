@@ -1,4 +1,4 @@
-# Public professional identity hub. Crawling is intentionally allowed.
+# Public professional identity hub. Search/discovery crawling is intentionally allowed.
 
 User-agent: OAI-SearchBot
 Allow: /
@@ -7,7 +7,7 @@ User-agent: ChatGPT-User
 Allow: /
 
 User-agent: GPTBot
-Allow: /
+Disallow: /
 
 User-agent: Googlebot
 Allow: /
