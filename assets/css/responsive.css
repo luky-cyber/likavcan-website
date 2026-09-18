@@ -68,3 +68,360 @@
     animation-iteration-count: 1 !important;
   }
 }
+
+/* v0.2.1 — compact reflow header for browser zoom and narrow viewports. */
+@media (max-width: 980px) {
+  .site-header {
+    position: static;
+  }
+
+  .site-header__inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem 1rem;
+    padding-block: 0.7rem;
+  }
+
+  .header-nav-group {
+    width: auto;
+    flex: 1 1 560px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: var(--space-3);
+  }
+
+  .site-nav {
+    width: auto;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.4rem 0.9rem;
+    overflow: visible;
+  }
+
+  .language-nav {
+    flex: 0 0 auto;
+    justify-content: flex-end;
+    padding-left: var(--space-3);
+    border-left: 1px solid var(--color-border);
+  }
+}
+
+@media (max-width: 640px) {
+  .site-header__inner {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    min-height: 0;
+    padding-block: 0.5rem;
+  }
+
+  .site-logo {
+    font-size: 1rem;
+  }
+
+  .header-nav-group {
+    width: 100%;
+    flex: 0 1 auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+  }
+
+  .site-nav {
+    width: 100%;
+    justify-content: center;
+    gap: 0.3rem 0.7rem;
+  }
+
+  .site-nav a {
+    font-size: 0.82rem;
+    padding: 0.2rem 0;
+  }
+
+  .language-nav {
+    justify-content: center;
+    padding-left: 0;
+    border-left: 0;
+    gap: 0.35rem;
+  }
+
+  .language-nav a {
+    font-size: 0.72rem;
+    padding: 0.22rem 0.38rem;
+  }
+}
+
+/* v0.2.1 RC4 — compact two-row mobile navigation after real-device Acode QA. */
+@media (max-width: 640px) {
+  .site-header__inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "logo language"
+      "primary primary";
+    align-items: center;
+    column-gap: 0.75rem;
+    row-gap: 0.25rem;
+    padding-block: 0.4rem;
+  }
+
+  .site-logo {
+    grid-area: logo;
+    justify-self: start;
+    font-size: 0.95rem;
+    line-height: 1.2;
+  }
+
+  .header-nav-group {
+    display: contents;
+  }
+
+  .site-nav {
+    grid-area: primary;
+    width: 100%;
+    justify-content: center;
+    gap: 0.25rem 0.75rem;
+  }
+
+  .site-nav a {
+    font-size: 0.8rem;
+    line-height: 1.25;
+    padding: 0.15rem 0;
+  }
+
+  .language-nav {
+    grid-area: language;
+    justify-content: flex-end;
+    gap: 0.15rem;
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .language-nav a {
+    font-size: 0.68rem;
+    line-height: 1.2;
+    padding: 0.18rem 0.3rem;
+  }
+}
+
+/* Keep profile navigation available without consuming two mobile rows. */
+@media (max-width: 768px) {
+  .profile-nav__inner {
+    min-height: 42px;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding-top: 0.45rem;
+    padding-bottom: 0.45rem;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .profile-nav__inner::-webkit-scrollbar {
+    display: none;
+  }
+
+  .profile-nav a {
+    flex: 0 0 auto;
+    font-size: 0.8rem;
+  }
+}
+
+/* v0.2.1 RC6 — compact sticky top navigation + contextual fixed bottom dock. */
+@media (max-width: 900px) {
+  .home-profile-card {
+    grid-template-columns: 140px minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --mobile-dock-height: 64px;
+  }
+
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .site-header__inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "logo language"
+      "primary primary";
+    align-items: center;
+    min-height: 0;
+    gap: 0.2rem 0.75rem;
+    padding-block: 0.38rem;
+  }
+
+  .site-logo {
+    grid-area: logo;
+    justify-self: start;
+    font-size: 0.96rem;
+  }
+
+  .header-nav-group {
+    display: contents;
+  }
+
+  .site-nav {
+    grid-area: primary;
+    width: 100%;
+    justify-content: center;
+    gap: 0.2rem 0.45rem;
+    overflow: visible;
+  }
+
+  .site-nav a {
+    padding: 0.28rem 0.52rem;
+    font-size: 0.82rem;
+    line-height: 1.2;
+  }
+
+  .language-nav {
+    grid-area: language;
+    justify-content: flex-end;
+    gap: 0.08rem;
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .language-nav a {
+    padding: 0.22rem 0.34rem;
+    font-size: 0.68rem;
+  }
+
+  /* Desktop profile strip stays a desktop affordance; mobile gets a bottom dock. */
+  .profile-nav {
+    display: none;
+  }
+
+  .mobile-profile-dock {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1050;
+    display: block;
+    min-height: var(--mobile-dock-height);
+    padding: 0.45rem max(0.65rem, env(safe-area-inset-left)) calc(0.45rem + env(safe-area-inset-bottom)) max(0.65rem, env(safe-area-inset-right));
+    border-top: 1px solid var(--color-border);
+    background: rgba(11,16,22,.92);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 -14px 38px rgba(0,0,0,.2);
+  }
+
+  .mobile-profile-dock__group {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.25rem;
+    align-items: stretch;
+  }
+
+
+  .mobile-profile-dock a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    min-height: 42px;
+    padding: 0.35rem 0.25rem;
+    border-radius: 0.75rem;
+    color: var(--color-text-muted);
+    font-size: 0.72rem;
+    font-weight: 700;
+    line-height: 1.15;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .mobile-profile-dock a:hover,
+  .mobile-profile-dock a.is-active {
+    color: var(--color-text);
+    background: rgba(99,216,208,.08);
+  }
+
+  body.has-mobile-dock .site-main,
+  body.has-mobile-dock .site-footer {
+    padding-bottom: calc(var(--mobile-dock-height) + env(safe-area-inset-bottom));
+  }
+
+  body.has-mobile-dock .cookie-banner {
+    bottom: calc(var(--mobile-dock-height) + 0.75rem + env(safe-area-inset-bottom));
+  }
+
+
+  .back-to-top {
+    right: max(0.75rem, env(safe-area-inset-right));
+    bottom: max(0.75rem, env(safe-area-inset-bottom));
+  }
+
+  body.has-mobile-dock .back-to-top {
+    bottom: calc(var(--mobile-dock-height) + 0.85rem + env(safe-area-inset-bottom));
+  }
+
+
+
+  .home-profiles {
+    padding-block: 2.75rem 3.5rem;
+  }
+
+  .home-profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-profile-card {
+    grid-template-columns: 120px minmax(0, 1fr);
+    min-height: 0;
+  }
+
+  .site-footer__inner {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .site-footer__links {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 520px) {
+  .home-profile-card {
+    grid-template-columns: 1fr;
+  }
+
+  .home-profile-card__media {
+    width: 132px;
+  }
+
+  .home-profile-card h2 {
+    font-size: 1.65rem;
+  }
+
+  .home-profile-card .button {
+    width: auto;
+  }
+}
+
+
+/* v0.2.1 RC10 — publication cards stay readable on narrow/mobile viewports. */
+.publication-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr));
+}
+
+@media (max-width: 900px) {
+  .publication-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-4);
+  }
+}

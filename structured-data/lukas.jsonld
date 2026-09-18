@@ -25,6 +25,25 @@
       },
       "mainEntity": {
         "@id": "https://likavcan.cz/lukas/#lukas-likavcan"
+      },
+      "dateModified": "2026-09-18T14:50:00+02:00",
+      "hasPart": [
+        {
+          "@id": "https://likavcan.cz/projects/fibre-orientation-injection-moulding/#webpage"
+        },
+        {
+          "@id": "https://likavcan.cz/projects/bezpecna-elektrika/#webpage"
+        },
+        {
+          "@id": "https://likavcan.cz/publications/#collection"
+        }
+      ],
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://likavcan.cz/assets/img/profiles/lukas-likavcan.webp",
+        "contentUrl": "https://likavcan.cz/assets/img/profiles/lukas-likavcan.jpg",
+        "width": 1000,
+        "height": 1000
       }
     },
     {
@@ -73,7 +92,11 @@
           "sameAs": "https://www.wikidata.org/wiki/Q3531548"
         },
         "Composite materials",
-        "Injection moulding",
+        {
+          "@type": "Thing",
+          "name": "Injection moulding",
+          "sameAs": "https://www.wikidata.org/wiki/Q260606"
+        },
         "Polymer processing",
         {
           "@type": "Thing",
@@ -82,10 +105,18 @@
         },
         "Short-fibre reinforced thermoplastics",
         "Plastics joining",
-        "Ultrasonic welding",
+        {
+          "@type": "Thing",
+          "name": "Ultrasonic welding",
+          "sameAs": "https://www.wikidata.org/wiki/Q580160"
+        },
         "Laser welding",
         "Numerical simulation",
-        "CAE",
+        {
+          "@type": "Thing",
+          "name": "Computer-aided engineering (CAE)",
+          "sameAs": "https://www.wikidata.org/wiki/Q1050567"
+        },
         "Electrical safety",
         "Electrical installations",
         "Electrical inspection and testing",
@@ -96,6 +127,16 @@
       "hasCredential": [
         {
           "@type": "EducationalOccupationalCredential",
+          "name": "Electrical inspection technician certificate – E2/A",
+          "credentialCategory": "E2/A",
+          "dateCreated": "2026-08-20",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Certifikačný a inšpekčný orgán SR, s. r. o."
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
           "name": "PhD. – Mechanical Technologies and Materials",
           "credentialCategory": "degree",
           "recognizedBy": {
@@ -104,7 +145,7 @@
         },
         {
           "@type": "EducationalOccupationalCredential",
-          "name": "Master of Engineering (Ing.)",
+          "name": "Engineer's degree (Ing.)",
           "credentialCategory": "degree",
           "recognizedBy": {
             "@id": "https://likavcan.cz/#mtf-stu"
@@ -118,11 +159,6 @@
           "url": "https://www.mtf.stuba.sk/sk/diani-na-mtf/aktuality/oznam-o-uspesnych-obhajobach-na-uvte-4.html?page_id=13318"
         },
         {
-          "@type": "CollectionPage",
-          "name": "STU publication catalogue – Lukáš Likavčan",
-          "url": "https://kis.cvt.stuba.sk/arl-stu/en/result/?disp=+Likav%C4%8Dan%2C+Luk%C3%A1%C5%A1%2C&field=AUP&qt=zf&src=stu_us_cat&term=%22%5ELikav%C4%8Dan%2C+Luk%C3%A1%C5%A1%2C%5E%22"
-        },
-        {
           "@type": "ScholarlyArticle",
           "name": "Using Sodium Hydrogen Carbonate for Foaming Polymers",
           "url": "https://kis.stuba.sk/arl-stu/en/detail-stu_us_cat-0022597-Using-sodium-hydrogen-carbonate-for-foaming-polymers/"
@@ -134,8 +170,8 @@
         },
         {
           "@type": "DigitalDocument",
-          "name": "MTF STU – Student Scientific Conference 2019: consultant Ing. Lukáš Likavčan, PhD., Branson Ultrasonics / STTIr",
-          "url": "https://www.mtf.stuba.sk/buxus/docs/doc/svk/2019/abstrakty/Vyrobne_technologie_2.pdf"
+          "name": "MTF STU – Young Researcher project No. 1341 (2015)",
+          "url": "https://www.mtf.stuba.sk/buxus/docs/UVTE/Projekty_domace_UVTE_2015.pdf"
         }
       ],
       "sameAs": [
@@ -149,11 +185,35 @@
       "worksFor": {
         "@id": "https://likavcan.cz/#bizzcom"
       },
-      "image": "https://likavcan.cz/assets/img/profiles/lukas-likavcan.webp",
-      "disambiguatingDescription": "Slovenský materiálový inžinier a R&D špecialista, absolvent Materiálovotechnologickej fakulty STU v Trnave, zameraný na polyméry, kompozity, spracovanie plastov a technológie spájania polymérov.",
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://likavcan.cz/assets/img/profiles/lukas-likavcan.webp",
+          "contentUrl": "https://likavcan.cz/assets/img/profiles/lukas-likavcan.jpg",
+          "width": 1000,
+          "height": 1000
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://likavcan.cz/assets/img/profiles/lukas-likavcan-4x3.jpg",
+          "width": 1000,
+          "height": 750
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://likavcan.cz/assets/img/profiles/lukas-likavcan-16x9.jpg",
+          "width": 1000,
+          "height": 563
+        }
+      ],
+      "disambiguatingDescription": "Slovenský materiálový inžinier a R&D špecialista, absolvent MTF STU v Trnave, pôsobiaci v BIZZCOM; zameraný na polyméry, kompozity, spracovanie plastov, spájanie polymérov a CAE.",
       "mainEntityOfPage": {
         "@id": "https://likavcan.cz/lukas/#profile-page"
-      }
+      },
+      "jobTitle": [
+        "Materials Engineer",
+        "Research and Development Specialist"
+      ]
     },
     {
       "@type": "Organization",
@@ -172,7 +232,7 @@
       "founder": {
         "@id": "https://likavcan.cz/lukas/#lukas-likavcan"
       },
-      "description": "Service-first professional project preparing electrical inspection services for electrical installations and equipment. Technical and educational content is a supporting layer. The E2A inspection-technician examination has been completed; the certificate has been issued and commercial inspection services have not yet launched."
+      "description": "Independent professional project focused on electrical safety, measurement, technical documentation and clear technical communication. The E2/A inspection-technician examination has been completed; commercial inspection services have not yet launched."
     }
   ]
 }

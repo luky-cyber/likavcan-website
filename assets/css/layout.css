@@ -34,7 +34,7 @@
 }
 
 .section--large {
-  padding-block: clamp(3.5rem, 6vw, 5rem);
+  padding-block: var(--space-9);
 }
 
 .grid {
@@ -54,4 +54,20 @@
   padding-block: var(--space-6);
   border-top: 1px solid var(--color-border);
   color: var(--color-text-muted);
+}
+/* v0.2.1 RC6 — shared layout rhythm. */
+.site-header {
+  background: rgba(11, 16, 22, 0.84);
+  border-bottom-color: var(--color-border);
+}
+
+.site-footer {
+  padding-block: 2.75rem calc(2.125rem + env(safe-area-inset-bottom));
+}
+
+.site-footer__inner {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2rem;
+  align-items: start;
 }

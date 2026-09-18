@@ -32,3 +32,13 @@ exclude:
   - RELEASE-v0.2.0.md
   - LUKAS-FIRST-PROOF-OF-WORK-v0.2.0.md
   - FINAL-AUDIT-v0.2.0.md
+  - tools
+  - RELEASE-v0.2.1.md
+  - FINAL-AUDIT-v0.2.1.md
+  - RELEASE-v0.2.2.md
+  - FINAL-AUDIT-v0.2.2.md
+  - RELEASE-v0.2.3.md
+  - FINAL-AUDIT-v0.2.3.md
+
+  - RELEASE-v0.2.4.md
+  - FINAL-AUDIT-v0.2.4.md

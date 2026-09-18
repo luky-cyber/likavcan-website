@@ -26,8 +26,9 @@
 <link href="https://likavcan.cz/de/lukas/" hreflang="de" rel="alternate"/>
 <link href="https://likavcan.cz/lukas/" hreflang="x-default" rel="alternate"/>
 <link href="../../assets/css/style.css" rel="stylesheet"/>
-<link href="../../favicon.ico" rel="icon"/>
-<script type="application/ld+json">{
+<link href="../../favicon.ico" rel="icon"/><link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<script type="application/ld+json">
+{
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -48,7 +49,7 @@
       "@id": "https://likavcan.cz/de/lukas/#profile-page",
       "url": "https://likavcan.cz/de/lukas/",
       "name": "Lukáš Likavčan – Berufsprofil",
-      "dateModified": "2026-08-31",
+      "dateModified": "2026-09-18T14:50:00+02:00",
       "inLanguage": "de",
       "primaryImageOfPage": {
         "@type": "ImageObject",
@@ -62,7 +63,18 @@
       },
       "mainEntity": {
         "@id": "https://likavcan.cz/lukas/#lukas-likavcan"
-      }
+      },
+      "hasPart": [
+        {
+          "@id": "https://likavcan.cz/de/projects/fibre-orientation-injection-moulding/#webpage"
+        },
+        {
+          "@id": "https://likavcan.cz/de/projects/bezpecna-elektrika/#webpage"
+        },
+        {
+          "@id": "https://likavcan.cz/de/publications/#collection"
+        }
+      ]
     },
     {
       "@type": "Person",
@@ -76,7 +88,27 @@
       "familyName": "Likavčan",
       "honorificPrefix": "Ing.",
       "url": "https://likavcan.cz/lukas/",
-      "image": "https://likavcan.cz/assets/img/profiles/lukas-likavcan.webp",
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://likavcan.cz/assets/img/profiles/lukas-likavcan.webp",
+          "contentUrl": "https://likavcan.cz/assets/img/profiles/lukas-likavcan.jpg",
+          "width": 1000,
+          "height": 1000
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://likavcan.cz/assets/img/profiles/lukas-likavcan-4x3.jpg",
+          "width": 1000,
+          "height": 750
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://likavcan.cz/assets/img/profiles/lukas-likavcan-16x9.jpg",
+          "width": 1000,
+          "height": 563
+        }
+      ],
       "description": "Slowakischer Werkstoffingenieur und F&E-Spezialist, Absolvent der MTF STU in Trnava, mit Schwerpunkt Polymere, Verbundwerkstoffe, Spritzgießen, Kunststofffügen und numerische Simulation.",
       "nationality": {
         "@type": "Country",
@@ -111,7 +143,11 @@
           "sameAs": "https://www.wikidata.org/wiki/Q3531548"
         },
         "Composite materials",
-        "Injection moulding",
+        {
+          "@type": "Thing",
+          "name": "Injection moulding",
+          "sameAs": "https://www.wikidata.org/wiki/Q260606"
+        },
         "Polymer processing",
         {
           "@type": "Thing",
@@ -120,10 +156,18 @@
         },
         "Short-fibre reinforced thermoplastics",
         "Plastics joining",
-        "Ultrasonic welding",
+        {
+          "@type": "Thing",
+          "name": "Ultrasonic welding",
+          "sameAs": "https://www.wikidata.org/wiki/Q580160"
+        },
         "Laser welding",
         "Numerical simulation",
-        "CAE",
+        {
+          "@type": "Thing",
+          "name": "Computer-aided engineering (CAE)",
+          "sameAs": "https://www.wikidata.org/wiki/Q1050567"
+        },
         "Electrical safety",
         "Electrical installations",
         "Electrical inspection and testing",
@@ -134,6 +178,16 @@
       "hasCredential": [
         {
           "@type": "EducationalOccupationalCredential",
+          "name": "Electrical inspection technician certificate – E2/A",
+          "credentialCategory": "E2/A",
+          "dateCreated": "2026-08-20",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Certifikačný a inšpekčný orgán SR, s. r. o."
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
           "name": "PhD. – Mechanical Technologies and Materials",
           "credentialCategory": "degree",
           "recognizedBy": {
@@ -142,7 +196,7 @@
         },
         {
           "@type": "EducationalOccupationalCredential",
-          "name": "Master of Engineering (Ing.)",
+          "name": "Engineer's degree (Ing.)",
           "credentialCategory": "degree",
           "recognizedBy": {
             "@id": "https://likavcan.cz/#mtf-stu"
@@ -156,11 +210,6 @@
           "url": "https://www.mtf.stuba.sk/sk/diani-na-mtf/aktuality/oznam-o-uspesnych-obhajobach-na-uvte-4.html?page_id=13318"
         },
         {
-          "@type": "CollectionPage",
-          "name": "STU publication catalogue – Lukáš Likavčan",
-          "url": "https://kis.cvt.stuba.sk/arl-stu/en/result/?disp=+Likav%C4%8Dan%2C+Luk%C3%A1%C5%A1%2C&field=AUP&qt=zf&src=stu_us_cat&term=%22%5ELikav%C4%8Dan%2C+Luk%C3%A1%C5%A1%2C%5E%22"
-        },
-        {
           "@type": "ScholarlyArticle",
           "name": "Using Sodium Hydrogen Carbonate for Foaming Polymers",
           "url": "https://kis.stuba.sk/arl-stu/en/detail-stu_us_cat-0022597-Using-sodium-hydrogen-carbonate-for-foaming-polymers/"
@@ -172,8 +221,8 @@
         },
         {
           "@type": "DigitalDocument",
-          "name": "MTF STU – Student Scientific Conference 2019: consultant Ing. Lukáš Likavčan, PhD., Branson Ultrasonics / STTIr",
-          "url": "https://www.mtf.stuba.sk/buxus/docs/doc/svk/2019/abstrakty/Vyrobne_technologie_2.pdf"
+          "name": "MTF STU – Young Researcher project No. 1341 (2015)",
+          "url": "https://www.mtf.stuba.sk/buxus/docs/UVTE/Projekty_domace_UVTE_2015.pdf"
         }
       ],
       "sameAs": [
@@ -187,10 +236,14 @@
       "worksFor": {
         "@id": "https://likavcan.cz/#bizzcom"
       },
-      "disambiguatingDescription": "Slowakischer Werkstoffingenieur und F&E-Spezialist, Absolvent der Fakultät für Werkstoffwissenschaften und Technologie (MTF STU) in Trnava, mit Schwerpunkt Polymere, Verbundwerkstoffe, Kunststoffverarbeitung und Fügetechnologien für Kunststoffe.",
+      "disambiguatingDescription": "Slowakischer Werkstoffingenieur und F&E-Spezialist, Absolvent der MTF STU in Trnava und bei BIZZCOM tätig; mit Schwerpunkt Polymere, Verbundwerkstoffe, Kunststoffverarbeitung, Kunststofffügen und CAE.",
       "mainEntityOfPage": {
         "@id": "https://likavcan.cz/de/lukas/#profile-page"
-      }
+      },
+      "jobTitle": [
+        "Materials Engineer",
+        "Research and Development Specialist"
+      ]
     },
     {
       "@type": "Organization",
@@ -209,20 +262,21 @@
       "founder": {
         "@id": "https://likavcan.cz/lukas/#lukas-likavcan"
       },
-      "description": "Service-first professional project preparing electrical inspection services for electrical installations and equipment. Technical and educational content is a supporting layer. The E2A inspection-technician examination has been completed; the certificate has been issued and commercial inspection services have not yet launched."
+      "description": "Independent professional project focused on electrical safety, measurement, technical documentation and clear technical communication. The E2/A inspection-technician examination has been completed; commercial inspection services have not yet launched."
     }
   ]
-}</script>
+}
+</script>
 <link href="https://likavcan.cz/feed.xml" rel="alternate" title="Likavcan.cz updates" type="application/atom+xml"/>
 <meta content="de_DE" property="og:locale"/><meta content="Likavcan.cz" property="og:site_name"/><meta content="Lukáš Likavčan, PhD. | Werkstoffingenieur | MTF STU" name="twitter:title"/><meta content="Profil von Lukáš Likavčan, PhD., Werkstoffingenieur und F&amp;E-Spezialist. Polymere, Verbundwerkstoffe, Spritzgießen, CAE und das eigenständige Fachprojekt Bezpečná elektrika." name="twitter:description"/></head>
 <body>
 <a class="skip-link" href="#main-content">Zum Hauptinhalt springen</a>
 <header class="site-header"><div class="container site-header__inner">
 <a aria-label="Likavcan.cz" class="site-logo" href="/de/">Likavcan.cz</a>
-<div class="header-nav-group"><nav aria-label="Hauptnavigation" class="site-nav"><a href="/de/">Startseite</a><a aria-current="page" href="/de/lukas/">Lukáš</a><a href="/de/projects/">Projekte</a><a href="/de/publications/">Publikationen</a></nav>
-<nav aria-label="Sprache" class="language-nav"><a href="/lukas/" hreflang="sk" lang="sk">SK</a><a href="/en/lukas/" hreflang="en" lang="en">EN</a><a aria-current="page" href="/de/lukas/" hreflang="de" lang="de">DE</a></nav></div>
+<div class="header-nav-group"><nav aria-label="Hauptnavigation" class="site-nav"><a href="/de/">Startseite</a><a aria-current="page" href="/de/lukas/">Lukáš</a><a href="/de/peter/">Peter</a></nav>
+<nav aria-label="Sprache" class="language-nav"><a href="../../lukas/" hreflang="sk" lang="sk">SK</a><a href="../../en/lukas/" hreflang="en" lang="en">EN</a><a aria-current="page" href="./" hreflang="de" lang="de">DE</a></nav></div>
 </div></header>
-<nav aria-label="Abschnitte im Profil von Lukáš" class="profile-nav"><div class="container profile-nav__inner"><a href="#profile">Profil</a><a href="#experience">Karriere</a><a href="#education">Ausbildung</a><a href="#expertise">Fachgebiete</a><a href="#projects">Projekte</a><a href="/de/publications/">Publikationen</a><a href="#contact">Kontakt</a><a class="profile-nav__external" href="https://bezpecnaelektrika.sk/">Bezpečná elektrika</a></div></nav>
+<nav aria-label="Abschnitte im Profil von Lukáš" class="profile-nav" data-dock-default="profile" data-profile-nav=""><div class="container profile-nav__inner"><a data-dock-key="profile" href="#profile">Profil</a><a data-dock-key="projects" href="#projects">Projekte</a><a data-dock-key="publications" href="#publications">Publikationen</a><a data-dock-key="contact" href="#contact">Kontakt</a></div></nav>
 <main class="site-main" id="main-content">
 <section class="section section--large">
 <div class="container">
@@ -234,54 +288,26 @@
 </picture>
 </div>
 <div class="content-column">
-<p class="hero__eyebrow">
-            Berufliches Profil
-          </p>
+<p class="hero__eyebrow">Werkstoffe · F&amp;E</p>
 <h1>
             Ing. Lukáš Likavčan, PhD.
           </h1>
-<p class="hero__lead">
-            Werkstoffingenieur und F&amp;E-Spezialist, Absolvent der Fakultät für Werkstoffwissenschaften und Technologie (MTF STU) in Trnava, mit Schwerpunkt Polymere, Verbundwerkstoffe, Spritzgießen, Kunststofffügen und numerische Simulation.
-          </p>
+<p class="hero__lead">Ich bin Werkstoffingenieur. Fast neun Jahre habe ich bei Branson am Fügen von Kunststoffen gearbeitet. Heute arbeite ich bei BIZZCOM an der technischen Konzeption und ingenieurwissenschaftlichen Ausarbeitung internationaler F&amp;E-Projekte. Daneben entwickle ich das Projekt <a href="https://bezpecnaelektrika.sk/" hreflang="sk">Bezpečná elektrika</a>.</p>
 <div class="button-group">
-<a class="button button--primary" href="#experience">
-              Berufserfahrung anzeigen
-            </a>
-<a class="button button--secondary" href="../">
-              Zurück zur Startseite
-            </a>
+<a class="button button--primary" href="#experience">Karriere</a>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section class="section" id="profile">
+<section class="section" data-dock-section="profile" id="profile">
 <div class="container">
 <div class="content-column">
-<p class="hero__eyebrow">
-            Profil
-          </p>
-<h2>
-            Forschung in Verbindung mit industrieller Praxis
-          </h2>
-<p class="identity-note"><strong>Berufliche Identität:</strong> Dieses Profil verknüpft meine berufliche Darstellung mit den unten aufgeführten überprüfbaren akademischen und beruflichen Quellen, darunter ORCID, Google Scholar, LinkedIn und Wikidata.</p>
-<p>
-            Ich bin ein technisch orientierter Ingenieur sowie Forschungs-
-            und Entwicklungsspezialist. Dabei verbinde ich Kenntnisse aus
-            den Materialwissenschaften, der Polymertechnik und der
-            numerischen Simulation mit den praktischen Anforderungen
-            industrieller Anwendungen.
-          </p>
-<p>
-            Meine beruflichen Erfahrungen umfassen Materialforschung,
-            die Verarbeitung von Thermoplasten, Verbundwerkstoffe,
-            Spritzgießen, Fügeverfahren für Kunststoffe,
-            Machbarkeitsstudien und CAE-Analysen.
-          </p>
+<h2>Woran ich arbeite</h2><p>Ich arbeite mit Polymeren, Verbundwerkstoffen, Spritzgießen, Fügetechnologien und numerischer Simulation. Mich interessiert, was im Werkstoff wirklich passiert — nicht nur, was die Software zeigt.</p>
 </div>
 </div>
-</section><section class="section section-tone" id="engineering-approach"><div class="container"><div class="content-column section-intro"><p class="hero__eyebrow">Technischer Arbeitsansatz</p><h2>Messen. Dokumentieren. Erklären.</h2></div><div class="approach-grid"><div class="approach-step"><strong>Messen</strong><p>Daten, Experimente, Simulation und Beobachtung haben Vorrang vor Eindrücken.</p></div><div class="approach-step"><strong>Dokumentieren</strong><p>Annahmen, Eingaben, Konfigurationen und technische Entscheidungen sollen nachvollziehbar bleiben.</p></div><div class="approach-step"><strong>Erklären</strong><p>Das Ergebnis soll in einen verständlichen technische Schlussfolgerung übersetzt werden.</p></div></div></div></section>
-<section class="section" id="experience">
+</section>
+<section class="section" data-dock-section="profile" id="experience">
 <div class="container">
 <div class="content-column">
 <p class="hero__eyebrow">
@@ -304,9 +330,10 @@
               Forschungs- und Entwicklungsabteilung
             </p>
 <p class="card__text">
-              Materialforschung, angewandte Entwicklung und Übertragung
-              fortgeschrittener werkstofftechnischer Kenntnisse
-              in moderne industrielle Lösungen.
+              Ich arbeite an der technischen und ingenieurwissenschaftlichen Vorbereitung internationaler F&amp;E-Projekte.
+              Dazu gehören technische Konzepte, Ziele, Methodik, Arbeitspakete, Ergebnisse,
+              Machbarkeitsbewertung und Umsetzungsplanung. Bei erfolgreich geförderten Projekten
+              setzt sich meine Arbeit in der technischen und ingenieurwissenschaftlichen Umsetzung fort.
             </p>
 <p class="card__text card__source"><a href="https://bizzcom.sk/vyskum/" rel="noopener noreferrer" target="_blank">Offizieller BIZZCOM R&amp;D-Kontext</a></p></article>
 <article class="card">
@@ -325,7 +352,7 @@
               insbesondere für Ultraschallschweißen, Laserschweißen
               und Heat-Staking-Verfahren.
             </p>
-<p class="card__text card__source"><a href="https://www.stuba.sk/sk/informacie-pre-uchadzacov/studijne-programy-a-studijne-odbory/vsetky-studijne-programy.html?d=186109-strojarske-technologie&amp;i=profil&amp;page_id=10703" rel="noopener noreferrer" target="_blank">STU-Nachweis + Branson-Technologiekontext</a></p></article>
+<p class="card__text card__source"><a href="https://www.stuba.sk/sk/informacie-pre-uchadzacov/studijne-programy-a-studijne-odbory/vsetky-studijne-programy.html?d=186109-strojarske-technologie&amp;i=profil&amp;page_id=10703" rel="noopener noreferrer" target="_blank">STU – Absolventenprofil ↗</a></p></article>
 </div>
 <div class="grid grid--2">
 <article class="card">
@@ -342,33 +369,24 @@
               Verpackungsindustrie und weiteren Industriezweigen.
             </p>
 </article>
-<article class="card">
-<span class="badge">
-              Schulungen
-            </span>
-<h3 class="card__title">
-              Kundenschulungen
-            </h3>
-<p class="card__text">
-              Technische Schulungen und Beratungen im Bereich
-              Ultraschallschweißen von Kunststoffen
-              und Heat-Staking-Technologien.
-            </p>
-</article>
 </div>
 </div>
 </section>
-<section class="section" id="education">
+<section class="section" data-dock-section="profile" id="education">
 <div class="container">
 <div class="content-column">
 <p class="hero__eyebrow">
             Ausbildung
           </p>
 <h2>
-            Akademische Qualifikationen
+            Ausbildung und fachliche Qualifikation
           </h2>
 </div>
-<div class="grid grid--3">
+<div class="grid education-grid"><article class="card">
+<span class="badge">2026</span>
+<h3 class="card__title">Qualifikation für elektrische Prüf- und Revisionstätigkeiten</h3>
+<p class="card__text">Im Jahr 2026 habe ich die Prüfung der Fachkompetenz gemäß § 24 im Umfang E2/A erfolgreich bestanden – elektrische Anlagen bis 1.000 V einschließlich Blitzschutz in Bereichen ohne Explosionsgefahr. Die Bescheinigung wurde ausgestellt.</p>
+<div class="button-group credential-card__actions"><a class="button button--secondary" href="../../assets/img/credentials/osvedcenie-e2a-lukas-likavcan-verejna-kopia.webp" aria-haspopup="dialog" data-credential-title="Öffentliche redigierte Kopie der Bescheinigung" data-credential-viewer="">Öffentliche Kopie der Bescheinigung anzeigen</a></div></article>
 <article class="card">
 <span class="badge">
               2017
@@ -386,6 +404,7 @@
               beim Spritzgießen auf die Eigenschaften
               kurzfaserverstärkter thermoplastischer Formteile.
             </p>
+<p class="card__text"><strong>Betreuer:</strong> Prof. Maroš Martinkovič, PhD.</p><p class="card__text card__source"><a aria-label="MTF STU – Nachweis der PhD-Verteidigung" href="https://www.mtf.stuba.sk/sk/diani-na-mtf/aktuality/oznam-o-uspesnych-obhajobach-na-uvte-4.html?page_id=13318" rel="noopener noreferrer" target="_blank">MTF STU ↗</a></p>
 </article>
 <article class="card">
 <span class="badge">
@@ -402,6 +421,7 @@
 <strong>Diplomarbeit:</strong><br/>
               Entwurf eines CAPP-Systems für das Funkenerodieren.
             </p>
+<p class="card__text card__source"><a aria-label="MTF STU – Nachweis der Diplomarbeit 2013" href="https://www.mtf.stuba.sk/sk/ustavy/ustav-vyrobnych-technologii/studium/diplomove-prace/diplomove-prace-2013.html?page_id=10880" rel="noopener noreferrer" target="_blank">MTF STU ↗</a></p>
 </article>
 <article class="card">
 <span class="badge">
@@ -419,23 +439,16 @@
               Möglichkeiten zur Erfassung zylindrischer Bauteile
               mit einem optischen 3D-Scanner.
             </p>
+<p class="card__text card__source"><a aria-label="MTF STU – Nachweis der Bachelorarbeit 2011" href="https://www.mtf.stuba.sk/sk/ustavy/ustav-vyrobnych-technologii/studium/bakalarske-prace/bakalarske-prace-2011.html?page_id=8406" rel="noopener noreferrer" target="_blank">MTF STU ↗</a></p>
 </article>
 </div>
 </div>
 </section>
-<section class="section" id="expertise">
+<section class="section" data-dock-section="profile" id="expertise">
 <div class="container">
 <div class="content-column">
-<p class="hero__eyebrow">
-            Fachgebiete
-          </p>
-<h2>
-            Forschung und technische Praxis
-          </h2>
-<p class="hero__lead">
-            Meine Fachgebiete basieren auf akademischer Forschung,
-            industrieller Anwendungserfahrung und numerischer Modellierung.
-          </p>
+<p class="hero__eyebrow">Fachgebiete</p>
+<h2>Werkstoffe, Prozesse und Simulation</h2>
 </div>
 <div class="grid grid--2">
 <article class="card">
@@ -491,43 +504,24 @@
             </p>
 </article>
 </div>
-</div>
+<p class="section-note">Werkzeuge: Siemens NX CAD, Siemens NX Simcenter, ANSYS und COMSOL Multiphysics. Englisch: C1.</p></div>
 </section>
-<section class="section" id="software">
+<section class="section" data-dock-section="projects" id="projects">
 <div class="container">
 <div class="content-column">
-<p class="hero__eyebrow">
-            Technische Werkzeuge
-          </p>
-<h2>
-            Software und Simulationen
-          </h2>
+<p class="hero__eyebrow">Projekte und fachliche Aktivitäten</p>
+<h2>Zusätzliche fachliche Qualifikation und Projekt</h2>
+<p>Mein beruflicher Schwerpunkt bleibt Werkstofftechnik, Polymere, Verbundwerkstoffe, Spritzgießen, Kunststoff-Fügetechnologien und CAE. Elektrische Sicherheit und Messtechnik bilden einen getrennten ergänzenden Fachbereich.</p>
 </div>
-<div class="grid grid--2">
 <article class="card">
-<h3 class="card__title">
-              CAD- und CAE-Systeme
-            </h3>
-<ul>
-<li>Siemens NX CAD</li>
-<li>Siemens NX Simcenter</li>
-<li>ANSYS</li>
-<li>COMSOL Multiphysics</li>
-</ul>
-</article>
-<article class="card">
-<h3 class="card__title">
-              Sprachkenntnisse
-            </h3>
-<p class="card__text">
-              Englisch – fortgeschrittene berufliche Kenntnisse,
-              Niveau C1.
-            </p>
+<span class="badge">Fachprojekt</span>
+<h3 class="card__title">Bezpečná elektrika</h3>
+<p class="card__text">Im Jahr 2026 habe ich die Prüfung der Fachkompetenz für elektrische Prüf- und Revisionstätigkeiten gemäß § 24 im Umfang E2/A erfolgreich bestanden; die Bescheinigung wurde ausgestellt. Das Projekt Bezpečná elektrika widmet sich elektrischer Sicherheit, Messungen und verständlichen technischen Erklärungen.</p>
+<p class="card__text">Kommerzielle Revisionsleistungen sind noch nicht gestartet.</p>
+<div class="button-group project-card__actions"><a class="button button--primary" href="https://bezpecnaelektrika.sk/" hreflang="sk">Website besuchen (Slowakisch) ↗</a></div>
 </article>
 </div>
-</div>
-</section>
-<section class="section" id="publications">
+</section><section class="section" data-dock-section="publications" id="publications">
 <div class="container">
 <div class="content-column">
 <p class="hero__eyebrow">
@@ -569,80 +563,12 @@
             Publikationen anzeigen
           </a>
 </div>
-</div>
+<div class="profile-quick-contact">Fachprofile:<a href="https://orcid.org/0000-0003-3949-6034" rel="me noopener noreferrer" target="_blank">ORCID</a><span aria-hidden="true" class="profile-quick-contact__sep">·</span><a href="https://scholar.google.com/citations?user=rBvaSKQAAAAJ" rel="me noopener noreferrer" target="_blank">Google Scholar</a><span aria-hidden="true" class="profile-quick-contact__sep">·</span><a href="https://www.researchgate.net/profile/Lukas-Likavcan-2" rel="me noopener noreferrer" target="_blank">ResearchGate</a></div></div>
 </section>
-<section class="section" id="profiles">
-<div class="container">
-<div class="content-column">
-<p class="hero__eyebrow">
-            Externe berufliche Profile
-          </p>
-<h2>
-            Forschungsidentifikatoren und Datenbanken
-          </h2>
-</div>
-<div class="button-group">
-<a class="button button--secondary" href="https://orcid.org/0000-0003-3949-6034" rel="me noopener noreferrer" target="_blank">
-            ORCID
-          </a>
-<a class="button button--secondary" href="https://scholar.google.com/citations?user=rBvaSKQAAAAJ" rel="me noopener noreferrer" target="_blank">
-            Google Scholar
-          </a>
-<a class="button button--secondary" href="https://www.researchgate.net/profile/Lukas-Likavcan-2" rel="me noopener noreferrer" target="_blank">
-            ResearchGate
-          </a>
-<a class="button button--secondary" href="https://www.linkedin.com/in/luk%C3%A1%C5%A1-likav%C4%8Dan-74695b84" rel="me noopener noreferrer" target="_blank">
-            LinkedIn
-          </a>
-<a class="button button--secondary" href="https://www.wikidata.org/wiki/Q139947576" rel="me noopener noreferrer" target="_blank">
-            Wikidata
-          </a>
-</div>
-</div>
-</section>
-<section class="section" id="projects">
-<div class="container">
-<div class="content-column">
-<p class="hero__eyebrow">Projekte und fachliche Aktivitäten</p>
-<h2>Zusätzliche fachliche Qualifikation und Projekt</h2>
-<p>Mein beruflicher Schwerpunkt bleibt Werkstofftechnik, Polymere, Verbundwerkstoffe, Spritzgießen, Kunststoff-Fügetechnologien und CAE. Elektrische Sicherheit und Messtechnik bilden einen getrennten ergänzenden Fachbereich.</p>
-</div>
-<article class="card">
-<span class="badge">Fachprojekt</span>
-<h3 class="card__title">Bezpečná elektrika</h3>
-<p class="card__text">Im Jahr 2026 habe ich eine fachliche Vorbereitung für elektrische Prüf- und Revisionstätigkeiten im Umfang E2A absolviert. Das Projekt Bezpečná elektrika widmet sich elektrischer Sicherheit, Messungen und verständlichen technischen Erklärungen.</p>
-<p class="card__text">Die E2A-Prüfung für Revisionstechniker wurde erfolgreich absolviert; der Nachweis wurde ausgestellt. Kommerzielle Revisionsleistungen sind noch nicht gestartet.</p>
-<div class="button-group project-card__actions"><a class="button button--secondary" href="/de/projects/bezpecna-elektrika/">Fallstudie ansehen</a><a class="button button--ghost" href="https://bezpecnaelektrika.sk/">Projekt besuchen ↗</a></div>
-</article>
-</div>
-</section>
-<section class="section section-tone" id="contact"><div class="container"><div class="contact-panel"><div><p class="hero__eyebrow">Professionelle Anfragen</p><h2>Professioneller Kontakt</h2><p>Für berufliche Fragen, F&amp;E-Themen oder technische Zusammenarbeit nutze ich LinkedIn als öffentlichen Kontaktkanal.</p><div class="button-group"><a class="button button--primary" href="https://www.linkedin.com/in/luk%C3%A1%C5%A1-likav%C4%8Dan-74695b84" rel="me noopener noreferrer" target="_blank">Kontakt über LinkedIn ↗</a><a class="button button--secondary" download="" href="../../lukas/lukas-likavcan.vcf">Kontakt speichern (.vcf)</a></div></div><div class="contact-panel__qr"><img alt="QR-Code für die vCard von Lukáš Likavčan" height="492" loading="eager" src="../../assets/img/qr/lukas-vcard.png" width="492"/></div></div></div></section><section class="section" id="references">
-<div class="container">
-<div class="content-column">
-<p class="hero__eyebrow">Verifizierbare externe Quellen</p>
-<h2>Akademische und berufliche Referenzen</h2>
-<p>Unabhängige akademische und berufliche Quellen belegen Ausbildung, wissenschaftliche Publikationen und berufliche Tätigkeit. Arbeitgeberlinks dienen als beruflicher Kontext.</p>
-<ul class="reference-list"><li><a href="https://www.mtf.stuba.sk/sk/diani-na-mtf/aktuality/oznam-o-uspesnych-obhajobach-na-uvte-4.html?page_id=13318" rel="noopener noreferrer" target="_blank">MTF STU — Dissertation (2017)</a></li><li><a href="https://www.stuba.sk/sk/informacie-pre-uchadzacov/studijne-programy-a-studijne-odbory/vsetky-studijne-programy.html?d=186109-strojarske-technologie&amp;i=profil&amp;page_id=10703" rel="noopener noreferrer" target="_blank">STU — Absolventenprofil</a></li><li><a href="https://www.mtf.stuba.sk/buxus/docs/doc/svk/2019/abstrakty/Vyrobne_technologie_2.pdf" rel="noopener noreferrer" target="_blank">MTF STU — Studentische Wissenschaftskonferenz 2019</a></li><li><a href="https://kis.cvt.stuba.sk/arl-stu/en/result/?disp=+Likav%C4%8Dan%2C+Luk%C3%A1%C5%A1%2C&amp;field=AUP&amp;qt=zf&amp;src=stu_us_cat&amp;term=%22%5ELikav%C4%8Dan%2C+Luk%C3%A1%C5%A1%2C%5E%22" rel="noopener noreferrer" target="_blank">STU — Publikationskatalog</a></li><li><a href="https://kis.stuba.sk/arl-stu/en/detail-stu_us_cat-0022597-Using-sodium-hydrogen-carbonate-for-foaming-polymers/" rel="noopener noreferrer" target="_blank">STU — Fachpublikation</a></li><li><a href="https://scholar.google.com/citations?user=rBvaSKQAAAAJ" rel="me noopener noreferrer" target="_blank">Google Scholar — Autorenprofil</a></li><li><a href="https://orcid.org/0000-0003-3949-6034" rel="me noopener noreferrer" target="_blank">ORCID — Forschungsidentifikator</a></li><li><a href="https://www.linkedin.com/in/luk%C3%A1%C5%A1-likav%C4%8Dan-74695b84" rel="me noopener noreferrer" target="_blank">LinkedIn — Berufsprofil</a></li><li><a href="https://www.wikidata.org/wiki/Q139947576" rel="me noopener noreferrer" target="_blank">Wikidata — Wissensdatenbank</a></li><li><a href="https://bizzcom.sk/vyskum/" rel="noopener noreferrer" target="_blank">BIZZCOM — Forschung und Entwicklung</a></li><li><a href="https://www.branson.emerson.com/en" rel="noopener noreferrer" target="_blank">Branson / Emerson — Kunststoff-Fügetechnologien</a></li></ul>
-</div>
-</div>
-</section>
-<section class="section" id="other-profile">
-<div class="container">
-<div class="content-column">
-<p class="hero__eyebrow">Weiteres Profil auf Likavcan.cz</p>
-<h2>Peter Likavčan</h2>
-<p>Simulation Specialist und Automation Engineer mit Schwerpunkt auf industrieller Simulation, Robotik und Virtual Commissioning.</p>
-<div class="button-group">
-<a class="button button--secondary" href="../peter/">Profil von Peter Likavčan anzeigen</a>
-</div>
-</div>
-</div>
-</section>
+
+<section class="section section-tone" data-dock-section="contact" id="contact"><div class="container"><div class="contact-panel"><div><p class="hero__eyebrow">Professionelle Anfragen</p><h2>Professioneller Kontakt</h2><p>Für berufliche Fragen, F&amp;E-Themen oder technische Zusammenarbeit nutze ich LinkedIn als öffentlichen Kontaktkanal.</p><div class="button-group"><a class="button button--primary" href="https://www.linkedin.com/in/luk%C3%A1%C5%A1-likav%C4%8Dan-74695b84" rel="me noopener noreferrer" target="_blank">Kontakt über LinkedIn ↗</a><a class="button button--secondary" download="" href="../../lukas/lukas-likavcan.vcf">Kontakt speichern (.vcf)</a></div></div><div class="contact-panel__qr"><img alt="QR-Code für die vCard von Lukáš Likavčan" height="492" loading="eager" src="../../assets/img/qr/lukas-vcard.png" width="492"/></div></div></div></section>
 </main>
-<footer class="site-footer"><div class="container site-footer__inner">
-<p>© 2026 Likavcan.cz</p>
-<p class="site-footer__links"><a href="/de/methodology/">Methodik &amp; Quellen</a><span aria-hidden="true">·</span><a href="/de/privacy/">Datenschutz</a><span aria-hidden="true">·</span><button class="footer-link-button" data-open-cookie-settings="" type="button">Cookie-Einstellungen</button></p>
-</div></footer>
+<footer class="site-footer"><div class="container site-footer__inner"><div class="site-footer__brand"><strong>Likavcan.cz</strong><span>Messen. Dokumentieren. Erklären.</span><small>© 2026 Likavcan.cz</small></div><p class="site-footer__links"><a href="/de/methodology/">Methodik &amp; Quellen</a><span aria-hidden="true">·</span><a href="/de/privacy/">Datenschutz</a><span aria-hidden="true">·</span><button class="footer-link-button" data-open-cookie-settings="" type="button">Cookie-Einstellungen</button></p></div></footer>
 <script src="../../assets/js/main.js"></script>
-</body>
+<nav aria-label="Mobile Profilnavigation" class="mobile-profile-dock" data-dock-default="profile" data-dock-owner="lukas"><div class="mobile-profile-dock__group"><a data-dock-key="profile" href="./">Profil</a><a data-dock-key="projects" href="../projects/">Projekte</a><a data-dock-key="publications" href="../publications/">Publikationen</a><a data-dock-key="contact" href="./#contact">Kontakt</a></div></nav></body>
 </html>

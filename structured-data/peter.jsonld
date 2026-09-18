@@ -25,6 +25,14 @@
       },
       "mainEntity": {
         "@id": "https://likavcan.cz/peter/#peter-likavcan"
+      },
+      "dateModified": "2026-09-18T14:50:00+02:00",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://likavcan.cz/assets/img/profiles/peter-likavcan.webp",
+        "contentUrl": "https://likavcan.cz/assets/img/profiles/peter-likavcan.jpg",
+        "width": 1000,
+        "height": 1000
       }
     },
     {
@@ -84,7 +92,6 @@
         },
         "Process Simulate",
         "Robotic cell simulation",
-        "KUKA robots",
         "Digital factory",
         {
           "@type": "Thing",
@@ -98,7 +105,7 @@
       "hasCredential": [
         {
           "@type": "EducationalOccupationalCredential",
-          "name": "Master of Engineering (Ing.) – Automation and Informatization of Industrial Processes",
+          "name": "Engineer's degree (Ing.) – Automation and Informatization of Industrial Processes",
           "credentialCategory": "degree",
           "recognizedBy": {
             "@id": "https://likavcan.cz/#mtf-stu"
@@ -118,7 +125,7 @@
           "@type": "CreativeWork",
           "name": "Návrh simulačného modelu robotickej bunky s využitím signálneho riadenia v prostredí Process Simulate modul Virtual Commissioning",
           "datePublished": "2016",
-          "url": "https://kis.stuba.sk/arl-stu/en/detail-stu_us_cat-stuzp55130-Navrh-simulacneho-modelu-robotickej-bunky-s-vyuzitim-signalneho-riadenia-v-prostredi-Process-Simulat/",
+          "url": "https://dk.fchpt.stuba.sk/Record/stu.stuzp55130/Channels",
           "author": {
             "@id": "https://likavcan.cz/peter/#peter-likavcan"
           },
@@ -129,19 +136,8 @@
             "Process Simulate",
             "Virtual Commissioning",
             "robotic cell",
-            "KUKA",
             "digital factory"
           ]
-        },
-        {
-          "@type": "CollectionPage",
-          "name": "STU academic catalogue – works by Peter Likavčan",
-          "url": "https://kis.stuba.sk/arl-stu/en/result/?disp=Likav%C4%8Dan+Peter&field=AUK&qt=zf&src=stu_us_cat&term=%22%5Estu_us_auth%5C%2Astu138973%5E%22"
-        },
-        {
-          "@type": "WebPage",
-          "name": "MTF STU – admission to Automation and Informatization of Industrial Processes (2014)",
-          "url": "https://www.mtf.stuba.sk/buxus/docs/doc/aktuality/2014/2014_07_18_Zoznam_prijatych_uch_ING.pdf"
         }
       ],
       "sameAs": [
@@ -151,11 +147,35 @@
       "worksFor": {
         "@id": "https://likavcan.cz/#porsche-werkzeugbau"
       },
-      "image": "https://likavcan.cz/assets/img/profiles/peter-likavcan.webp",
-      "disambiguatingDescription": "Slovenský špecialista na priemyselné simulácie a automatizáciu, absolvent Materiálovotechnologickej fakulty STU v Trnave, zameraný na priemyselnú robotiku, Process Simulate a Virtual Commissioning.",
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://likavcan.cz/assets/img/profiles/peter-likavcan.webp",
+          "contentUrl": "https://likavcan.cz/assets/img/profiles/peter-likavcan.jpg",
+          "width": 1000,
+          "height": 1000
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://likavcan.cz/assets/img/profiles/peter-likavcan-4x3.jpg",
+          "width": 1000,
+          "height": 750
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://likavcan.cz/assets/img/profiles/peter-likavcan-16x9.jpg",
+          "width": 1000,
+          "height": 563
+        }
+      ],
+      "disambiguatingDescription": "Slovenský špecialista na priemyselné simulácie a automatizáciu, absolvent MTF STU v Trnave, pôsobiaci v Porsche Werkzeugbau; zameraný na priemyselnú robotiku, Process Simulate a Virtual Commissioning.",
       "mainEntityOfPage": {
         "@id": "https://likavcan.cz/peter/#profile-page"
-      }
+      },
+      "jobTitle": [
+        "Simulation Specialist",
+        "Automation Engineer"
+      ]
     },
     {
       "@type": "Organization",

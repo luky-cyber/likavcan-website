@@ -1,42 +1,38 @@
 # Likavcan.cz
 
-> Professional identity and proof-of-work website focused primarily on Lukáš Likavčan, PhD., with a related professional profile for Peter Likavčan.
+> Professional website and engineering work hub of Lukáš Likavčan and Peter Likavčan.
 
-## Primary person
-### Lukáš Likavčan
-- Profile: https://likavcan.cz/lukas/
-- Stable entity ID: https://likavcan.cz/lukas/#lukas-likavcan
-- Focus: materials engineering, polymers, composites, injection moulding, plastics joining, numerical simulation and CAE
-- Projects: https://likavcan.cz/projects/
+## Lukáš Likavčan
+- Canonical profile: https://likavcan.cz/lukas/
+- Person URI: https://likavcan.cz/lukas/#lukas-likavcan
+- Full name: Ing. Lukáš Likavčan, PhD.
+- Job titles: Materials Engineer; Research and Development Specialist
+- Education: MTF STU, Faculty of Materials Science and Technology in Trnava
+- Current organization: BIZZCOM s.r.o.
+- Focus: materials engineering, polymers, composites, injection moulding, plastics joining, numerical simulation and R&D
+- ORCID: https://orcid.org/0000-0003-3949-6034
+- Wikidata: https://www.wikidata.org/wiki/Q139947576
+- LinkedIn: https://www.linkedin.com/in/luk%C3%A1%C5%A1-likav%C4%8Dan-74695b84
+- Selected research project: MTF STU Young Researcher project No. 1341 (2015), quantitative material-structure analysis and injection-moulding process optimisation
+- Google Scholar: https://scholar.google.com/citations?user=rBvaSKQAAAAJ
 - Publications: https://likavcan.cz/publications/
-- Methodology: https://likavcan.cz/methodology/
-- Public contact channel: LinkedIn from the profile page
+- Projects: https://likavcan.cz/projects/
+- Materials research case study: https://likavcan.cz/projects/fibre-orientation-injection-moulding/
+- Bezpečná elektrika case study: https://likavcan.cz/projects/bezpecna-elektrika/
 
-## Materials research case study
-### Fibre orientation in injection-moulded thermoplastics
-- Case study: https://likavcan.cz/projects/fibre-orientation-injection-moulding/
-- Research context: doctoral and co-authored work on injection moulding, short-fibre reinforced thermoplastics, fibre orientation, materialography and numerical simulation
-- Evidence: peer-reviewed publications, DOI/publisher records and MTF STU doctoral records
-- Interpretation rule: simulation output is not treated as an engineering conclusion without context and comparison to physical evidence where verification is required.
+## Peter Likavčan
+- Canonical profile: https://likavcan.cz/peter/
+- Person URI: https://likavcan.cz/peter/#peter-likavcan
+- Full name: Ing. Peter Likavčan
+- Job titles: Simulation Specialist; Automation Engineer
+- Education: MTF STU, Faculty of Materials Science and Technology in Trnava
+- Current organization: Porsche Werkzeugbau GmbH
+- Focus: industrial simulation, automation, robotics, Process Simulate, Virtual Commissioning and Digital Factory
+- Wikidata: https://www.wikidata.org/wiki/Q139977167
+- LinkedIn: https://www.linkedin.com/in/peter-likav%C4%8Dan-4a668311a
+- Diploma thesis (2016): robotic-cell simulation using Process Simulate and Virtual Commissioning; STU catalogue record linked from the profile
 
-## Featured project
-### Bezpečná elektrika
-- Case study: https://likavcan.cz/projects/bezpecna-elektrika/
-- Inspection-services page: https://bezpecnaelektrika.sk/revizie/
-- Project website: https://bezpecnaelektrika.sk/
-- Positioning: service-first project preparing electrical inspection services; technical and educational content is a supporting layer.
-- Current status: E2A examination completed, certificate issued, commercial inspection services not yet launched.
-- Stable project ID: https://bezpecnaelektrika.sk/#project
-- Relationship: founder -> https://likavcan.cz/lukas/#lukas-likavcan
-- The project is not a sameAs identity for the person.
-
-## Related person
-### Peter Likavčan
-- Profile: https://likavcan.cz/peter/
-- Stable entity ID: https://likavcan.cz/peter/#peter-likavcan
-- Focus: industrial simulation, industrial automation, robotics, Process Simulate, Virtual Commissioning and Digital Factory
-
-## Language versions
+## Languages
 - Slovak: https://likavcan.cz/
 - English: https://likavcan.cz/en/
 - German: https://likavcan.cz/de/
@@ -44,9 +40,5 @@
 ## Discovery
 - Sitemap: https://likavcan.cz/sitemap.xml
 - Atom feed: https://likavcan.cz/feed.xml
+- Sources and working principles: https://likavcan.cz/methodology/
 - Privacy: https://likavcan.cz/privacy/
-
-## AI crawler policy
-- OAI-SearchBot: allowed
-- ChatGPT-User: allowed
-- GPTBot: disallowed

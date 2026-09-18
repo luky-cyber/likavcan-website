@@ -1,65 +1,27 @@
-# LIKAVCAN.CZ
+# LIKAVCAN.CZ — TODO after v0.2.4
 
-## Version 1.0
+## Production gates
+- [x] Content/navigation baseline manually accepted on desktop and mobile before deployment.
+- [ ] Deploy v0.2.4 and run a short production desktop/mobile smoke, including footer/privacy Cookie settings and Back-to-top.
+- [ ] Complete 200%/400% zoom/reflow spot check.
+- [ ] Android production cold-start check: fully close/reopen the browser, then verify E2/A first opens fit-to-screen; `100 %` or a document click switches to native size inside the same viewer; `Prispôsobiť` or another document click returns to fit; `×` closes to the profile; desktop Escape.
+- [ ] Request Search Console recrawl for Home, Lukáš, Peter and Publications.
+- [ ] Re-test vCard import and QR scan on real Windows/iOS/Android devices only if contact handling changes in a future release.
 
-- [x] Domain
-- [x] Cloudflare DNS
-- [x] GitHub Pages
-- [x] VS Code
-- [x] Live Server
-- [x] Project structure
+## Privacy / infrastructure debt
+- [ ] Verify the actual Google Analytics property retention setting before replacing generic Privacy wording; do not invent the value.
+- [ ] Confirm a direct privacy contact channel only if the owner chooses to publish one.
+- [ ] Review production security headers / redirects at the hosting layer before any infrastructure change.
 
-- [ ] Home page
-- [ ] Lukas profile
-- [ ] CSS
-- [ ] Responsive design
-- [ ] JSON-LD
-- [ ] SEO
-- [ ] Google Search Console
-- [ ] Lighthouse
-- [ ] Deployment
+## External identity authority
+- [ ] Synchronize current facts on ResearchGate, ORCID, Google Scholar, LinkedIn and Wikidata.
+- [ ] Seek an authoritative BIZZCOM profile/reference for Lukáš and an appropriate employer/profile reference for Peter.
+- [ ] Add public source links only when they materially help explain a current project, education item, publication or professional claim.
 
----
+## Policy
+- [ ] `Google-Extended` remains intentionally allowed for discovery/grounding; revisit only if site policy changes.
+- [ ] Keep institutional source URLs out of `Person.sameAs`; retain archival corroboration in the internal evidence registry.
 
-## Version 2.0
-
-- [ ] Peter profile
-- [ ] Publications
-- [ ] Projects
-- [ ] Certificates
-- [ ] Blog
-
----
-
-## Version 3.0
-
-- [ ] Technical articles
-- [ ] Research database
-- [ ] Knowledge Graph
-
----
-
-## Future
-
-- [ ] Electrical inspection services
-- [ ] Professional training
-- [ ] Consulting
-## v0.2.0 final release gates
-- [x] Normalize bibliography across SK/EN/DE and remove incorrect conference DOI association.
-- [x] Fix sticky-header offsets for hash/TOC permalinks.
-- [x] Clean semantically false `aria-current="page"` uses.
-- [x] Atom feed timestamps reflect substantive editorial/status changes; the production deployment/release date remains separate and TBD until deployment succeeds.
-- [x] Run browser consent flow: first visit → Essential → All → revoke to Essential.
-- [x] Move Methodology from primary navigation to footer utility navigation.
-- [x] Replace long homepage with minimalist Lukáš/Peter identity-contact directory and add context-aware Home/Lukáš/Peter navigation.
-- [x] Add localized Professional identity wording and ProfilePage dateModified.
-- [x] Standardize case-study metadata blocks and complete targeted German UI polish.
-- [x] Fix QR/vCard paths for local/Acode preview and increase scan-friendly QR size.
-- [x] RC3: Windows Contacts vCard and QR scanning pass; Classic/New Outlook fail with quoted-printable.
-- [x] RC4: plain UTF-8 vCard displays correctly in Windows Contacts and the tested Outlook clients.
-- [x] Synchronize E2A qualification status: examination completed, certificate issued, commercial inspection services still not launched.
-- [x] Acode/Android spot-check and QR path/scan verification.
-- [x] Final visual/runtime review approved; Acode/Android and Full-HD presentation checked during the RC cycle.
-- [x] Section permalink controls are hidden by default and removed from touch/mobile presentation; stable hash URLs remain available.
-- [ ] Complete Privacy notice only with verified operational/legal facts; do not invent retention/contact details.
-- [ ] `Google-Extended` remains intentionally allowed for now because it also controls Gemini grounding; revisit if the site-wide policy changes from discovery-first to training-block-first.
+## Content freeze
+- [x] v0.2.4 content frozen for deployment; no further identity/evidence/SEO expansion.
+- [ ] Add new visible profile content later only when there is a real new project, publication, role change, relevant credential or substantial technical case study.

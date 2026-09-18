@@ -1,11 +1,11 @@
 BEGIN:VCARD
 VERSION:3.0
 PRODID:-//Likavcan.cz//Professional vCard 3.0//EN
-FN;CHARSET=utf-8:Ing. Lukáš Likavčan, PhD.
-N;CHARSET=utf-8:Likavčan;Lukáš;;Ing.;PhD.
-TITLE;CHARSET=utf-8:Materials Engineer and R&D Specialist
+FN;CHARSET=UTF-8;ENCODING=QUOTED-PRINTABLE:Ing.=20Luk=C3=A1=C5=A1=20Likav=C4=8Dan,=20PhD.
+N;CHARSET=UTF-8;ENCODING=QUOTED-PRINTABLE:Likav=C4=8Dan;Luk=C3=A1=C5=A1;;Ing.;PhD.
+TITLE;CHARSET=UTF-8:Materials Engineer and R&D Specialist
 URL;TYPE=WORK:https://likavcan.cz/lukas/
 URL:https://orcid.org/0000-0003-3949-6034
 URL:https://www.linkedin.com/in/luk%C3%A1%C5%A1-likav%C4%8Dan-74695b84
-NOTE;CHARSET=utf-8:Materials engineer and R&D specialist. Professional identity profile at Likavcan.cz.
+NOTE;CHARSET=UTF-8:Materials engineer and R&D specialist. Professional identity profile at Likavcan.cz.
 END:VCARD

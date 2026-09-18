@@ -22,7 +22,7 @@
 <meta content="Likavčan" property="profile:last_name"/>
 <link href="https://likavcan.cz/peter/" rel="canonical"/>
 <link href="../assets/css/style.css" rel="stylesheet"/>
-<link href="../favicon.ico" rel="icon"/>
+<link href="../favicon.ico" rel="icon"/><link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
 <link href="https://likavcan.cz/peter/" hreflang="sk" rel="alternate"/>
 <link href="https://likavcan.cz/en/peter/" hreflang="en" rel="alternate"/>
 <link href="https://likavcan.cz/de/peter/" hreflang="de" rel="alternate"/>
@@ -49,7 +49,7 @@
       "@id": "https://likavcan.cz/peter/#profile-page",
       "url": "https://likavcan.cz/peter/",
       "name": "Peter Likavčan – professional profile",
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-18T14:50:00+02:00",
       "inLanguage": "sk",
       "primaryImageOfPage": {
         "@type": "ImageObject",
@@ -77,7 +77,27 @@
       "familyName": "Likavčan",
       "honorificPrefix": "Ing.",
       "url": "https://likavcan.cz/peter/",
-      "image": "https://likavcan.cz/assets/img/profiles/peter-likavcan.webp",
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://likavcan.cz/assets/img/profiles/peter-likavcan.webp",
+          "contentUrl": "https://likavcan.cz/assets/img/profiles/peter-likavcan.jpg",
+          "width": 1000,
+          "height": 1000
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://likavcan.cz/assets/img/profiles/peter-likavcan-4x3.jpg",
+          "width": 1000,
+          "height": 750
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://likavcan.cz/assets/img/profiles/peter-likavcan-16x9.jpg",
+          "width": 1000,
+          "height": 563
+        }
+      ],
       "description": "Slovenský špecialista na priemyselné simulácie a automatizáciu, absolvent MTF STU v Trnave, so zameraním na robotiku, Process Simulate, Virtual Commissioning a online/offline programovanie.",
       "nationality": {
         "@type": "Country",
@@ -123,7 +143,6 @@
         },
         "Process Simulate",
         "Robotic cell simulation",
-        "KUKA robots",
         "Digital factory",
         {
           "@type": "Thing",
@@ -137,7 +156,7 @@
       "hasCredential": [
         {
           "@type": "EducationalOccupationalCredential",
-          "name": "Master of Engineering (Ing.) – Automation and Informatization of Industrial Processes",
+          "name": "Engineer's degree (Ing.) – Automation and Informatization of Industrial Processes",
           "credentialCategory": "degree",
           "recognizedBy": {
             "@id": "https://likavcan.cz/#mtf-stu"
@@ -157,7 +176,7 @@
           "@type": "CreativeWork",
           "name": "Návrh simulačného modelu robotickej bunky s využitím signálneho riadenia v prostredí Process Simulate modul Virtual Commissioning",
           "datePublished": "2016",
-          "url": "https://kis.stuba.sk/arl-stu/en/detail-stu_us_cat-stuzp55130-Navrh-simulacneho-modelu-robotickej-bunky-s-vyuzitim-signalneho-riadenia-v-prostredi-Process-Simulat/",
+          "url": "https://dk.fchpt.stuba.sk/Record/stu.stuzp55130/Channels",
           "author": {
             "@id": "https://likavcan.cz/peter/#peter-likavcan"
           },
@@ -168,19 +187,8 @@
             "Process Simulate",
             "Virtual Commissioning",
             "robotic cell",
-            "KUKA",
             "digital factory"
           ]
-        },
-        {
-          "@type": "CollectionPage",
-          "name": "STU academic catalogue – works by Peter Likavčan",
-          "url": "https://kis.stuba.sk/arl-stu/en/result/?disp=Likav%C4%8Dan+Peter&field=AUK&qt=zf&src=stu_us_cat&term=%22%5Estu_us_auth%5C%2Astu138973%5E%22"
-        },
-        {
-          "@type": "WebPage",
-          "name": "MTF STU – admission to Automation and Informatization of Industrial Processes (2014)",
-          "url": "https://www.mtf.stuba.sk/buxus/docs/doc/aktuality/2014/2014_07_18_Zoznam_prijatych_uch_ING.pdf"
         }
       ],
       "sameAs": [
@@ -190,10 +198,14 @@
       "worksFor": {
         "@id": "https://likavcan.cz/#porsche-werkzeugbau"
       },
-      "disambiguatingDescription": "Slovenský špecialista na priemyselné simulácie a automatizáciu, absolvent Materiálovotechnologickej fakulty STU v Trnave, zameraný na priemyselnú robotiku, Process Simulate a Virtual Commissioning.",
+      "disambiguatingDescription": "Slovenský špecialista na priemyselné simulácie a automatizáciu, absolvent MTF STU v Trnave, pôsobiaci v Porsche Werkzeugbau; zameraný na priemyselnú robotiku, Process Simulate a Virtual Commissioning.",
       "mainEntityOfPage": {
         "@id": "https://likavcan.cz/peter/#profile-page"
-      }
+      },
+      "jobTitle": [
+        "Simulation Specialist",
+        "Automation Engineer"
+      ]
     },
     {
       "@type": "Organization",
@@ -213,18 +225,10 @@
 <a class="skip-link" href="#main-content">Preskočiť na hlavný obsah</a>
 <header class="site-header"><div class="container site-header__inner">
 <a aria-label="Likavcan.cz" class="site-logo" href="/">Likavcan.cz</a>
-<div class="header-nav-group"><nav aria-label="Hlavná navigácia" class="site-nav"><a href="/">Domov</a><a aria-current="page" href="/peter/">Peter</a></nav>
-<nav aria-label="Jazyk" class="language-nav"><a aria-current="page" href="/peter/" hreflang="sk" lang="sk">SK</a><a href="/en/peter/" hreflang="en" lang="en">EN</a><a href="/de/peter/" hreflang="de" lang="de">DE</a></nav></div>
+<div class="header-nav-group"><nav aria-label="Hlavná navigácia" class="site-nav"><a href="/">Domov</a><a href="/lukas/">Lukáš</a><a aria-current="page" href="/peter/">Peter</a></nav>
+<nav aria-label="Jazyk" class="language-nav"><a aria-current="page" href="./" hreflang="sk" lang="sk">SK</a><a href="../en/peter/" hreflang="en" lang="en">EN</a><a href="../de/peter/" hreflang="de" lang="de">DE</a></nav></div>
 </div></header>
-<nav aria-label="Sekcie profilu Peter" class="profile-nav">
-<div class="container profile-nav__inner">
-<a href="#profile">Profil</a>
-<a href="#experience">Kariéra</a>
-<a href="#education">Vzdelanie</a>
-<a href="#expertise">Odborné oblasti</a>
-<a href="#references">Zdroje</a>
-</div>
-</nav>
+<nav aria-label="Sekcie profilu Peter" class="profile-nav" data-profile-nav="" data-dock-default="profile"><div class="container profile-nav__inner"><a data-dock-key="profile" href="#profile">Profil</a><a data-dock-key="career" href="#experience">Kariéra</a><a data-dock-key="expertise" href="#expertise">Oblasti</a><a data-dock-key="contact" href="#contact">Kontakt</a></div></nav>
 <main class="site-main" id="main-content">
 <section class="section section--large">
 <div class="container">
@@ -236,52 +240,26 @@
 </picture>
 </div>
 <div class="content-column">
-<p class="hero__eyebrow">
-            Profesijný profil
-          </p>
+<p class="hero__eyebrow">Simulácie · výroba</p>
 <h1>
             Ing. Peter Likavčan
           </h1>
-<p class="hero__lead">
-            Špecialista na priemyselné simulácie a automatizáciu, absolvent Materiálovotechnologickej fakulty STU v Trnave, so zameraním na robotiku, Process Simulate, Virtual Commissioning a online/offline programovanie výrobných systémov.
-          </p>
+<p class="hero__lead">Peter sa venuje priemyselným simuláciám a programovaniu automatizovaných výrobných systémov. Od roku 2020 pôsobí v Porsche Werkzeugbau.</p>
 <div class="button-group">
-<a class="button button--primary" href="#experience">
-              Zobraziť skúsenosti
-            </a>
-<a class="button button--secondary" href="../">
-              Späť na hlavnú stránku
-            </a>
+<a class="button button--primary" href="#experience">Kariéra</a>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section class="section" id="profile">
+<section class="section" data-dock-section="profile" id="profile">
 <div class="container">
 <div class="content-column">
-<p class="hero__eyebrow">
-            Profil
-          </p>
-<h2>
-            Simulácie a automatizácia výrobných procesov
-          </h2>
-<p class="identity-note"><strong>Profesionálna identita:</strong> Profil prepája Petrovu profesionálnu prezentáciu s overiteľnými akademickými a profesijnými zdrojmi uvedenými nižšie, najmä so záznamami STU, LinkedIn a Wikidata.</p>
-<p>
-            Profesijne sa venuje simuláciám priemyselných výrobných
-            systémov, programovaniu automatizovaných pracovísk
-            a virtuálnemu sprevádzkovaniu robotických buniek.
-          </p>
-<p>
-            Jeho pracovné skúsenosti zahŕňajú online a offline
-            programovanie, tvorbu simulačných modelov a overovanie
-            riadenia výrobných zariadení pred ich fyzickým uvedením
-            do prevádzky.
-          </p>
+<h2>Simulácie pred spustením výroby</h2><p>Pracuje so simulačnými modelmi, online a offline programovaním a virtuálnym sprevádzkovaním robotických buniek a výrobných pracovísk.</p>
 </div>
 </div>
 </section>
-<section class="section" id="experience">
+<section class="section" data-dock-section="career" id="experience">
 <div class="container">
 <div class="content-column">
 <p class="hero__eyebrow">
@@ -357,7 +335,7 @@
 </div>
 </div>
 </section>
-<section class="section" id="education">
+<section class="section" data-dock-section="career" id="education">
 <div class="container">
 <div class="content-column">
 <p class="hero__eyebrow">
@@ -379,6 +357,8 @@
               Slovenská technická univerzita v Bratislave,
               Materiálovotechnologická fakulta so sídlom v Trnave.
             </p>
+<p class="card__text"><strong>Diplomová práca:</strong><br/>Návrh simulačného modelu robotickej bunky s využitím signálneho riadenia v prostredí Process Simulate, modul Virtual Commissioning.</p>
+<p class="card__text card__source"><a aria-label="STU katalóg – diplomová práca Petra Likavčana, 2016" href="https://dk.fchpt.stuba.sk/Record/stu.stuzp55130/Channels" rel="noopener noreferrer" target="_blank">STU katalóg ↗</a></p>
 </article>
 <article class="card">
 <span class="badge">
@@ -395,24 +375,16 @@
 </div>
 </div>
 </section>
-<section class="section" id="expertise">
+<section class="section" data-dock-section="expertise" id="expertise">
 <div class="container">
 <div class="content-column">
-<p class="hero__eyebrow">
-            Odborné zameranie
-          </p>
-<h2>
-            Simulácie, programovanie a virtuálne sprevádzkovanie
-          </h2>
-<p class="hero__lead">
-            Odborné oblasti vychádzajú z praktických skúseností
-            s automatizáciou a simuláciou výrobných systémov.
-          </p>
+<p class="hero__eyebrow">Odborné oblasti</p>
+<h2>Simulácie, robotika a programovanie</h2>
 </div>
 <div class="grid grid--2">
 <article class="card">
 <span class="badge">
-              Simulation
+              Simulácie
             </span>
 <h3 class="card__title">
               Process Simulate
@@ -424,7 +396,7 @@
 </article>
 <article class="card">
 <span class="badge">
-              Commissioning
+              Sprevádzkovanie
             </span>
 <h3 class="card__title">
               Virtual Commissioning
@@ -436,7 +408,7 @@
 </article>
 <article class="card">
 <span class="badge">
-              Programming
+              Programovanie
             </span>
 <h3 class="card__title">
               Online a offline programovanie
@@ -448,7 +420,7 @@
 </article>
 <article class="card">
 <span class="badge">
-              Software
+              Softvér
             </span>
 <h3 class="card__title">
               C# a Step7
@@ -462,95 +434,10 @@
 </div>
 </div>
 </section>
-<section class="section" id="skills">
-<div class="container">
-<div class="content-column">
-<p class="hero__eyebrow">
-            Technické znalosti
-          </p>
-<h2>
-            Vybrané zručnosti
-          </h2>
-</div>
-<div class="grid grid--2">
-<article class="card">
-<h3 class="card__title">
-              Simulácie a automatizácia
-            </h3>
-<ul>
-<li>Process Simulate</li>
-<li>Virtual Commissioning</li>
-<li>Online Programming</li>
-<li>Offline Programming</li>
-<li>Step7</li>
-</ul>
-</article>
-<article class="card">
-<h3 class="card__title">
-              Programovanie
-            </h3>
-<ul>
-<li>C#</li>
-<li>Udalosťami riadené systémy</li>
-<li>Automatizované výrobné pracoviská</li>
-<li>Robotické bunky</li>
-</ul>
-</article>
-</div>
-</div>
-</section>
-<section class="section section-tone" id="contact"><div class="container"><div class="contact-panel"><div><p class="hero__eyebrow">Professional inquiries</p><h2>Profesionálny kontakt</h2><p>Pre profesijné otázky a spoluprácu je verejným kontaktným kanálom LinkedIn.</p><div class="button-group"><a class="button button--primary" href="https://www.linkedin.com/in/peter-likav%C4%8Dan-4a668311a" rel="me noopener noreferrer" target="_blank">Kontakt cez LinkedIn ↗</a><a class="button button--secondary" download="" href="peter-likavcan.vcf">Uložiť kontakt (.vcf)</a></div></div><div class="contact-panel__qr"><img alt="QR kód pre vCard Petra Likavčana" height="492" loading="eager" src="../assets/img/qr/peter-vcard.png" width="492"/></div></div></div></section><section class="section" id="references">
-<div class="container">
-<div class="content-column">
-<p class="hero__eyebrow">Overiteľné externé zdroje</p>
-<h2>Akademické a profesijné referencie</h2>
-<p>Nezávislé akademické a profesijné zdroje dokladajú vzdelanie, akademické práce a odborné pôsobenie. Odkazy na zamestnávateľov slúžia ako profesijný kontext.</p>
-<ul class="reference-list"><li><a href="https://kis.stuba.sk/arl-stu/en/detail-stu_us_cat-stuzp55130-Navrh-simulacneho-modelu-robotickej-bunky-s-vyuzitim-signalneho-riadenia-v-prostredi-Process-Simulat/" rel="noopener noreferrer" target="_blank">STU — diplomová práca (2016)</a></li><li><a href="https://kis.stuba.sk/arl-stu/en/result/?disp=Likav%C4%8Dan+Peter&amp;field=AUK&amp;qt=zf&amp;src=stu_us_cat&amp;term=%22%5Estu_us_auth%5C%2Astu138973%5E%22" rel="noopener noreferrer" target="_blank">STU — katalóg akademických prác</a></li><li><a href="https://www.mtf.stuba.sk/buxus/docs/doc/aktuality/2014/2014_07_18_Zoznam_prijatych_uch_ING.pdf" rel="noopener noreferrer" target="_blank">MTF STU — prijatie na inžinierske štúdium (2014)</a></li><li><a href="https://www.linkedin.com/in/peter-likav%C4%8Dan-4a668311a" rel="me noopener noreferrer" target="_blank">LinkedIn — profesijný profil</a></li><li><a href="https://www.wikidata.org/wiki/Q139977167" rel="me noopener noreferrer" target="_blank">Wikidata — znalostná databáza</a></li><li><a href="https://www.porsche-werkzeugbau.com/en/services/bodyinwhite/" rel="noopener noreferrer" target="_blank">Porsche Werkzeugbau — Simulation &amp; Virtual Commissioning</a></li><li><a href="https://www.matador-group.eu/en/our-companies/simulations/" rel="noopener noreferrer" target="_blank">MATADOR Automation — simulácie a offline programovanie</a></li><li><a href="https://www.tmechgroup.com/our-services/" rel="noopener noreferrer" target="_blank">t-mech — simulácie a offline programovanie</a></li></ul>
-</div>
-</div>
-</section>
-<section class="section" id="external-profile">
-<div class="container">
-<div class="content-column">
-<p class="hero__eyebrow">
-            Externý profesijný profil
-          </p>
-<h2>
-            LinkedIn
-          </h2>
-<p>
-            Ďalšie verejne dostupné profesijné informácie sú uvedené
-            na profile LinkedIn.
-          </p>
-</div>
-<div class="button-group">
-<a class="button button--secondary" href="https://www.linkedin.com/in/peter-likav%C4%8Dan-4a668311a" rel="me noopener noreferrer" target="_blank">
-            Zobraziť LinkedIn
-          </a>
 
-<a class="button button--secondary" href="../">
-            Späť na hlavnú stránku
-          </a>
-</div>
-</div>
-</section>
-<section class="section" id="other-profile">
-<div class="container">
-<div class="content-column">
-<p class="hero__eyebrow">Ďalší profil na Likavcan.cz</p>
-<h2>Lukáš Likavčan</h2>
-<p>Materiálový inžinier a R&amp;D špecialista so zameraním na polyméry, kompozity, spracovanie plastov a numerické simulácie.</p>
-<div class="button-group">
-<a class="button button--secondary" href="../lukas/">Zobraziť profil Lukáša Likavčana</a>
-</div>
-</div>
-</div>
-</section>
+<section class="section section-tone" data-dock-section="contact" id="contact"><div class="container"><div class="contact-panel"><div><p class="hero__eyebrow">Profesijné otázky</p><h2>Profesionálny kontakt</h2><p>Pre profesijné otázky a spoluprácu je verejným kontaktným kanálom LinkedIn.</p><div class="button-group"><a class="button button--primary" href="https://www.linkedin.com/in/peter-likav%C4%8Dan-4a668311a" rel="me noopener noreferrer" target="_blank">Kontakt cez LinkedIn ↗</a><a class="button button--secondary" download="" href="peter-likavcan.vcf">Uložiť kontakt (.vcf)</a></div></div><div class="contact-panel__qr"><img alt="QR kód pre vCard Petra Likavčana" height="492" loading="eager" src="../assets/img/qr/peter-vcard.png" width="492"/></div></div></div></section>
 </main>
-<footer class="site-footer"><div class="container site-footer__inner">
-<p>© 2026 Likavcan.cz</p>
-<p class="site-footer__links"><a href="/methodology/">Metodika a zdroje</a><span aria-hidden="true">·</span><a href="/privacy/">Ochrana súkromia</a><span aria-hidden="true">·</span><button class="footer-link-button" data-open-cookie-settings="" type="button">Nastavenia cookies</button></p>
-</div></footer>
+<footer class="site-footer"><div class="container site-footer__inner"><div class="site-footer__brand"><strong>Likavcan.cz</strong><span>Merať. Dokumentovať. Vysvetľovať.</span><small>© 2026 Likavcan.cz</small></div><p class="site-footer__links"><a href="/methodology/">Metodika a zdroje</a><span aria-hidden="true">·</span><a href="/privacy/">Ochrana súkromia</a><span aria-hidden="true">·</span><button class="footer-link-button" data-open-cookie-settings="" type="button">Nastavenia cookies</button></p></div></footer>
 <script src="../assets/js/main.js"></script>
-</body>
+<nav aria-label="Mobilná navigácia profilu" class="mobile-profile-dock" data-dock-default="profile" data-dock-owner="peter"><div class="mobile-profile-dock__group"><a data-dock-key="profile" href="#profile">Profil</a><a data-dock-key="career" href="#experience">Kariéra</a><a data-dock-key="expertise" href="#expertise">Oblasti</a><a data-dock-key="contact" href="#contact">Kontakt</a></div></nav></body>
 </html>

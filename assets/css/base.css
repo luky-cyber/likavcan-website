@@ -76,17 +76,33 @@ ol {
 
 ::selection {
   background: var(--color-primary);
-  color: #ffffff;
+  color: var(--color-on-primary);
 }
 
 :focus-visible {
   outline: 3px solid var(--color-focus);
   outline-offset: 3px;
 }
+/* One anchor offset source only. Using both scroll-padding and section
+   scroll-margin doubled the sticky header offset and left scrollspy one
+   section behind after profile-nav clicks. */
 html {
   scroll-padding-top: var(--scroll-offset, 96px);
 }
 
-main section[id] {
-  scroll-margin-top: var(--scroll-offset, 96px);
+/* v0.2.1 RC6 — shared visual DNA with Bezpečná elektrika. */
+body {
+  background:
+    radial-gradient(circle at 70% -10%, rgba(99, 216, 208, 0.08), transparent 28%),
+    var(--color-background);
+}
+
+::selection {
+  background: rgba(99, 216, 208, 0.28);
+  color: var(--color-text);
+}
+
+:focus-visible {
+  outline-color: rgba(99, 216, 208, 0.78);
+  outline-offset: 4px;
 }
