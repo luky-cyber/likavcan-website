@@ -21,6 +21,8 @@ Final deploy package prepared from `Likavcan-Website-v0.2.5-Preview-R3.zip` afte
 - Expanded the internal AI identity benchmark with factual-precision guardrails.
 - Synchronized ProfilePage `dateModified`, sitemap `lastmod` values and Atom feed freshness for the actually changed pages.
 - Added `RELEASE-v0.2.5.md`.
+- Added the v0.2.5 release/audit/preview documents to Jekyll `exclude` so repository documentation is not emitted into the public site.
+- Updated `README.md` and `TODO.md` to the v0.2.5 release/post-release state and marked early preview notes as historical where superseded.
 
 ## Invariants preserved
 
@@ -34,7 +36,7 @@ Final deploy package prepared from `Likavcan-Website-v0.2.5-Preview-R3.zip` afte
 
 ## Regression result
 
-`51 PASS / 0 FAIL`
+`52 PASS / 0 FAIL`
 
 The release regression covers local links, canonical/hreflang reciprocity, JSON-LD parsing and stable entity IDs, accessibility semantics, identity links/vCards/QR codes, cookie consent/focus behavior, credential viewer behavior, mobile/desktop profile navigation, sitemap/feed chronology, source integration, ORCID/SFRT final guardrails and JavaScript syntax.
 

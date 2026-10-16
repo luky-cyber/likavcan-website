@@ -20,6 +20,7 @@ Conservative human-first profile update based on the v0.2.4 production baseline.
 - Profile titles/descriptions and homepage Person stubs reinforce the same stable entity graph.
 - Machine-readable chronology (`<time datetime>`) was added where dates are already visible.
 - Sitemap/feed freshness and internal AI identity/factual-precision benchmark are synchronized.
+- Release documentation is excluded from the public Jekyll output; README/TODO now reflect the v0.2.5 release state.
 
 ## Stable entity IDs
 

@@ -1560,6 +1560,28 @@ def check_v025_final_identity_precision():
         for x in issues: fail('v0.2.5 final identity precision: '+x)
     else: ok('v0.2.5 final ORCID/SFRT chronology and factual-precision guardrails')
 
+def check_v025_release_documentation_hygiene():
+    issues=[]
+    config=(ROOT/'_config.yml').read_text(encoding='utf-8')
+    for rel in ('PREVIEW-NOTES-v0.2.5.md','RELEASE-v0.2.5.md','FINAL-AUDIT-v0.2.5.md'):
+        if f'  - {rel}' not in config:
+            issues.append(f'_config.yml: {rel} is not excluded from Jekyll output')
+    readme=(ROOT/'README.md').read_text(encoding='utf-8')
+    if '**v0.2.5 — Human-first Identity & Factual Precision**' not in readme:
+        issues.append('README current release is not v0.2.5')
+    if '52 PASS / 0 FAIL' not in readme:
+        issues.append('README regression baseline is not 52 PASS / 0 FAIL')
+    todo=(ROOT/'TODO.md').read_text(encoding='utf-8')
+    if not todo.startswith('# LIKAVCAN.CZ — TODO after v0.2.5'):
+        issues.append('TODO is not in post-v0.2.5 state')
+    preview=(ROOT/'PREVIEW-NOTES-v0.2.5.md').read_text(encoding='utf-8')
+    if 'Historical preview log:' not in preview:
+        issues.append('preview notes do not mark superseded early-round state as historical')
+    if issues:
+        for x in issues: fail('v0.2.5 release documentation hygiene: '+x)
+    else: ok('v0.2.5 Jekyll exclusions and release documentation state')
+
+
 def check_release_hygiene():
     bad=[]
     for p in ROOT.rglob('*'):
@@ -1623,6 +1645,7 @@ def main() -> int:
     check_v025_preview_identity_reinforcement()
     check_v025_preview_r3_polish()
     check_v025_final_identity_precision()
+    check_v025_release_documentation_hygiene()
     check_release_hygiene()
     check_hero_loading()
     check_js()

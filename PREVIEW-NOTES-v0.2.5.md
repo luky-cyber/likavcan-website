@@ -2,6 +2,8 @@
 
 Local review build based on the deployed v0.2.4 RC15 baseline. This is **not** a GitHub release.
 
+> Historical preview log: early-round bullets document the state at that review stage. Where they differ from the **Final release round**, the final-release state supersedes them (for example Lukáš homepage quick links now include ORCID).
+
 ## Implemented agreed changes
 
 - Homepage SK/EN/DE: clickable names, concise role + employer anchors for both people.

@@ -42,3 +42,7 @@ exclude:
 
   - RELEASE-v0.2.4.md
   - FINAL-AUDIT-v0.2.4.md
+
+  - PREVIEW-NOTES-v0.2.5.md
+  - RELEASE-v0.2.5.md
+  - FINAL-AUDIT-v0.2.5.md
