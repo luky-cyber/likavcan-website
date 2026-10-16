@@ -306,6 +306,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const lang = (document.documentElement.lang || "sk").toLowerCase();
   let analyticsLoaded = false;
   let memoryConsent = null;
+  let cookieReturnFocus = null;
 
   // Consent Mode v2 default state is established locally before any Google script is loaded.
   window.dataLayer = window.dataLayer || [];
@@ -395,7 +396,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const script=document.createElement("script"); script.async=true; script.src=`https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(measurementId)}`; script.dataset.ga4Id=measurementId; document.head.appendChild(script);
   };
 
-  const removeBanner=()=>{ const b=document.querySelector(".cookie-banner"); if(!b)return; b.classList.remove("is-visible"); setTimeout(()=>{ b.remove(); updateBackToTopVisibility(); },200); };
+  const removeBanner=()=>{
+    const b=document.querySelector(".cookie-banner");
+    if(!b)return;
+    const returnFocus=cookieReturnFocus;
+    cookieReturnFocus=null;
+    b.classList.remove("is-visible");
+    setTimeout(()=>{
+      b.remove();
+      updateBackToTopVisibility();
+      if(returnFocus instanceof HTMLElement && returnFocus.isConnected) returnFocus.focus();
+    },200);
+  };
 
   const saveConsent = (value) => {
     const previous=readConsent();
@@ -406,15 +418,23 @@ document.addEventListener("DOMContentLoaded", () => {
     if(previous==="all" && value==="essential") window.setTimeout(()=>window.location.reload(),120);
   };
 
-  function showBanner(immediate=false){
-    if(document.querySelector(".cookie-banner"))return;
+  function showBanner(immediate=false, opener=null){
+    const existing=document.querySelector(".cookie-banner");
+    if(existing){
+      if(immediate){
+        cookieReturnFocus=opener instanceof HTMLElement ? opener : document.activeElement;
+        existing.querySelector('[data-consent="all"]')?.focus();
+      }
+      return;
+    }
+    if(immediate) cookieReturnFocus=opener instanceof HTMLElement ? opener : document.activeElement;
     const banner=document.createElement("aside"); banner.className="cookie-banner"; banner.setAttribute("role","dialog"); banner.setAttribute("aria-live","polite"); banner.setAttribute("aria-modal","false"); banner.setAttribute("aria-label",t.title);
     banner.innerHTML=`<div class="cookie-banner__top"><div><h2 class="cookie-banner__title">${t.title}</h2><p class="cookie-banner__text">${t.text} <a href="${privacyUrl}">${t.privacy}</a>.</p></div><button class="cookie-banner__close" type="button" aria-label="${t.closeLabel}">×</button></div><div class="cookie-banner__actions"><button class="button button--secondary" type="button" data-consent="all">${t.acceptAll}</button><button class="button button--secondary" type="button" data-consent="essential">${t.essentialOnly}</button></div>`;
-    document.body.appendChild(banner); backToTop.classList.remove("is-visible"); backToTop.tabIndex=-1; backToTop.setAttribute("aria-hidden","true"); requestAnimationFrame(()=>setTimeout(()=>banner.classList.add("is-visible"),immediate?0:900));
+    document.body.appendChild(banner); backToTop.classList.remove("is-visible"); backToTop.tabIndex=-1; backToTop.setAttribute("aria-hidden","true"); requestAnimationFrame(()=>setTimeout(()=>{ banner.classList.add("is-visible"); if(immediate) banner.querySelector('[data-consent="all"]')?.focus(); },immediate?0:900));
     banner.querySelector('[data-consent="all"]').addEventListener("click",()=>saveConsent("all")); banner.querySelector('[data-consent="essential"]').addEventListener("click",()=>saveConsent("essential")); banner.querySelector(".cookie-banner__close").addEventListener("click",()=>saveConsent("essential"));
   }
 
-  document.querySelectorAll("[data-open-cookie-settings]").forEach(b=>b.addEventListener("click",()=>showBanner(true)));
+  document.querySelectorAll("[data-open-cookie-settings]").forEach(b=>b.addEventListener("click",()=>showBanner(true,b)));
   const saved=readConsent();
   if(saved==="all"){ loadAnalytics(); } else if(saved==="essential"){ disableAnalytics(); } else { disableAnalytics(); showBanner(); }
 

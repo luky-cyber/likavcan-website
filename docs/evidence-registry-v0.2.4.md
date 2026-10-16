@@ -7,7 +7,7 @@ Internal provenance register. This file is excluded from the public GitHub Pages
 - PhD defence / dissertation / supervisor (2017): https://www.mtf.stuba.sk/sk/diani-na-mtf/aktuality/oznam-o-uspesnych-obhajobach-na-uvte-4.html?page_id=13318
 - Bachelor thesis record (2011): https://www.mtf.stuba.sk/sk/ustavy/ustav-vyrobnych-technologii/studium/bakalarske-prace/bakalarske-prace-2011.html?page_id=8406
 - Engineering thesis record (2013): https://www.mtf.stuba.sk/sk/ustavy/ustav-vyrobnych-technologii/studium/diplomove-prace/diplomove-prace-2013.html?page_id=10880
-- Young Researcher project No. 1341 (2015): https://www.mtf.stuba.sk/buxus/docs/UVTE/Projekty_domace_UVTE_2015.pdf
+- Young Researcher project No. 1341 (2015): https://www.mtf.stuba.sk/buxus/docs/doc/informacie_o/Prehlad_projektov_riesenych_v_r._2015.pdf
 - Project overview / supervisor context (2015): https://www.mtf.stuba.sk/buxus/docs/doc/informacie_o/Prehlad_projektov_riesenych_v_r._2015.pdf
 - UVTE publication activity (2021): https://www.mtf.stuba.sk/buxus/docs/UVTE/publikacie/UVTE_publikacna_2021.pdf
 - MTF STU study literature (2026/2027): https://www.mtf.stuba.sk/buxus/docs/OPOM/PDF_Zoznam_studijnej_literatury_ak.r.26_27.pdf

@@ -26,7 +26,7 @@
       "mainEntity": {
         "@id": "https://likavcan.cz/lukas/#lukas-likavcan"
       },
-      "dateModified": "2026-09-18T14:50:00+02:00",
+      "dateModified": "2026-10-16T17:08:00+02:00",
       "hasPart": [
         {
           "@id": "https://likavcan.cz/projects/fibre-orientation-injection-moulding/#webpage"
@@ -171,7 +171,7 @@
         {
           "@type": "DigitalDocument",
           "name": "MTF STU – Young Researcher project No. 1341 (2015)",
-          "url": "https://www.mtf.stuba.sk/buxus/docs/UVTE/Projekty_domace_UVTE_2015.pdf"
+          "url": "https://www.mtf.stuba.sk/buxus/docs/doc/informacie_o/Prehlad_projektov_riesenych_v_r._2015.pdf"
         }
       ],
       "sameAs": [

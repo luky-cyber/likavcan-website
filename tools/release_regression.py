@@ -690,19 +690,24 @@ def check_v023_content_cta():
         'en/projects/index.html': ['View research', 'Visit website (Slovak) ↗', 'button button--primary" href="/en/publications/">Publications'],
         'de/projects/index.html': ['Forschung ansehen', 'Website besuchen (Slowakisch) ↗', 'button button--primary" href="/de/publications/">Publikationen'],
     }
-    forbidden=('four international R&D project proposals','štyroch projekt','Horizon Europe','NATO DIANA','European Defence Fund','Zobraziť prípadovú štúdiu','View case study','Fallstudie ansehen')
+    forbidden=('four international R&D project proposals','štyroch projekt','Horizon Europe','NATO DIANA','European Defence Fund')
     for rel,want in checks.items():
         txt=(ROOT/rel).read_text(encoding='utf-8')
         for token in want:
             if token not in txt: issues.append(f'{rel}: missing {token!r}')
     for rel in ('lukas/index.html','en/lukas/index.html','de/lukas/index.html'):
         txt=(ROOT/rel).read_text(encoding='utf-8')
-        for token in forbidden[:5]:
+        for token in forbidden:
             if token in txt: issues.append(f'{rel}: unwanted proposal detail {token!r}')
-    for rel in ('projects/index.html','en/projects/index.html','de/projects/index.html'):
+    case_study_links={
+      'projects/index.html': ('/projects/bezpecna-elektrika/','Prípadová štúdia'),
+      'en/projects/index.html': ('/en/projects/bezpecna-elektrika/','Case study'),
+      'de/projects/index.html': ('/de/projects/bezpecna-elektrika/','Fallstudie'),
+    }
+    for rel,(href,label) in case_study_links.items():
         txt=(ROOT/rel).read_text(encoding='utf-8')
-        for token in forbidden[5:]:
-            if token in txt: issues.append(f'{rel}: legacy case-study CTA {token!r}')
+        if f'href="{href}"' not in txt or f'>{label}</a>' not in txt:
+            issues.append(f'{rel}: internal Bezpečná elektrika case-study CTA missing')
     if issues:
         for x in issues: fail('v0.2.3 content/CTA: '+x)
     else: ok('v0.2.3 R&D copy + clear primary CTA guardrails')
@@ -732,7 +737,7 @@ def check_v023_rc2_chronology():
         m=re.search(r'<section[^>]*id="education".*?<div class="grid education-grid">(.*?)</div>\s*</div>\s*</section>',txt,re.S)
         if not m:
             issues.append(f'{rel}: education grid not found'); continue
-        years=re.findall(r'<span class="badge">\s*(2026|2017|2013|2011)\s*</span>',m.group(1))
+        years=re.findall(r'<span class="badge">\s*(?:<time[^>]*>)?(2026|2017|2013|2011)(?:</time>)?\s*</span>',m.group(1))
         if years[:4] != ['2026','2017','2013','2011']:
             issues.append(f'{rel}: education order {years[:4]!r}')
     for rel in ('projects/index.html','en/projects/index.html','de/projects/index.html'):
@@ -935,7 +940,7 @@ def check_v023_rc4_compact_desktop_and_education():
         if 'class="grid education-grid"' not in txt: issues.append(f'{rel}: education-grid hook missing')
         if 'credential-card__preview' in txt or 'osvedcenie-e2a-lukas-likavcan-verejna-kopia-preview.webp' in txt:
             issues.append(f'{rel}: credential thumbnail remains')
-        years=re.findall(r'<span class="badge">\s*(2026|2017|2013|2011)\s*</span>', txt[txt.find('id="education"'):txt.find('id="expertise"')])
+        years=re.findall(r'<span class="badge">\s*(?:<time[^>]*>)?(2026|2017|2013|2011)(?:</time>)?\s*</span>', txt[txt.find('id="education"'):txt.find('id="expertise"')])
         if years[:4] != ['2026','2017','2013','2011']:
             issues.append(f'{rel}: education order {years[:4]!r}')
     data=json.loads((ROOT/'structured-data/lukas.jsonld').read_text(encoding='utf-8'))
@@ -983,7 +988,7 @@ def check_v024_integrated_sources():
     # Lukáš: project 1341 is normal Projects content; academic sources are contextual.
     for rel in ('projects/index.html','en/projects/index.html','de/projects/index.html'):
         txt=(ROOT/rel).read_text(encoding='utf-8')
-        if 'id="young-researcher-1341"' not in txt or 'Projekty_domace_UVTE_2015.pdf' not in txt:
+        if 'id="young-researcher-1341"' not in txt or 'Prehlad_projektov_riesenych_v_r._2015.pdf' not in txt:
             issues.append(f'{rel}: project 1341 not integrated into Projects')
     for rel in ('lukas/index.html','en/lukas/index.html','de/lukas/index.html'):
         txt=(ROOT/rel).read_text(encoding='utf-8')
@@ -1041,13 +1046,17 @@ def check_v024_integrated_sources():
 
     sitemap=(ROOT/'sitemap.xml').read_text(encoding='utf-8')
     profile_urls=('/lukas/','/peter/','/en/lukas/','/en/peter/','/de/lukas/','/de/peter/')
-    unchanged_urls=('/publications/','/projects/','/en/publications/','/en/projects/','/de/publications/','/de/projects/')
+    changed_project_indexes=('/projects/','/en/projects/','/de/projects/')
+    changed_publications=('/publications/','/en/publications/','/de/publications/')
     for url in profile_urls:
-        if f'<loc>https://likavcan.cz{url}</loc>\n    <lastmod>2026-09-18</lastmod>' not in sitemap:
+        if f'<loc>https://likavcan.cz{url}</loc>\n    <lastmod>2026-10-16</lastmod>' not in sitemap:
             issues.append(f'sitemap profile lastmod not updated for {url}')
-    for url in unchanged_urls:
-        if f'<loc>https://likavcan.cz{url}</loc>\n    <lastmod>2026-09-17</lastmod>' not in sitemap:
-            issues.append(f'sitemap unchanged lastmod drift for {url}')
+    for url in changed_project_indexes:
+        if f'<loc>https://likavcan.cz{url}</loc>\n    <lastmod>2026-10-16</lastmod>' not in sitemap:
+            issues.append(f'sitemap changed project-index lastmod drift for {url}')
+    for url in changed_publications:
+        if f'<loc>https://likavcan.cz{url}</loc>\n    <lastmod>2026-10-16</lastmod>' not in sitemap:
+            issues.append(f'sitemap changed publications lastmod drift for {url}')
 
     registry=(ROOT/'docs/evidence-registry-v0.2.4.md')
     if not registry.exists() or '2012_prosp_stip_web_2bc_zoznam.pdf' not in registry.read_text(encoding='utf-8'):
@@ -1404,12 +1413,152 @@ def check_v024_deploy_readiness():
     for rel in ('lukas/index.html','en/lukas/index.html','de/lukas/index.html','peter/index.html','en/peter/index.html','de/peter/index.html'):
         objs=_jsonld_objects(rel)
         pages=[o for o in objs if o.get('@type')=='ProfilePage']
-        if len(pages)!=1 or pages[0].get('dateModified')!='2026-09-18T14:50:00+02:00':
+        if len(pages)!=1 or pages[0].get('dateModified')!='2026-10-16T17:08:00+02:00':
             issues.append(f'{rel}: final ProfilePage dateModified drift')
 
     if issues:
         for x in issues: fail('v0.2.4 deploy readiness: '+x)
-    else: ok('v0.2.4 footer/privacy consent controls + schema purity + final profile metadata guardrails')
+    else: ok('v0.2.5 preview footer/privacy controls + schema purity + updated profile metadata')
+
+def check_v025_preview_identity_reinforcement():
+    issues=[]
+    homes={
+      'index.html': ('Materiálový inžinier · R&amp;D špecialista · BIZZCOM','Simulation Specialist · Porsche Werkzeugbau'),
+      'en/index.html': ('Materials Engineer · R&amp;D Specialist · BIZZCOM','Simulation Specialist · Porsche Werkzeugbau'),
+      'de/index.html': ('Werkstoffingenieur · F&amp;E-Spezialist · BIZZCOM','Simulationsspezialist · Porsche Werkzeugbau'),
+    }
+    for rel,(lukas_role,peter_role) in homes.items():
+        txt=(ROOT/rel).read_text(encoding='utf-8')
+        if lukas_role not in txt or peter_role not in txt:
+            issues.append(f'{rel}: role/employer anchors missing')
+        if 'home-profile-card__name-link' not in txt or txt.count('home-profile-card__name-link') != 2:
+            issues.append(f'{rel}: canonical name links missing')
+        if txt.count('Wikidata ↗') != 2:
+            issues.append(f'{rel}: expected two subtle Wikidata links')
+        for qid in ('Q139947576','Q139977167'):
+            if qid not in txt: issues.append(f'{rel}: missing {qid}')
+        # Human-first order: LinkedIn, vCard, Wikidata inside each compact row.
+        for who in ('Lukáš Likavčan','Peter Likavčan'):
+            m=re.search(rf'<div aria-label="{re.escape(who)}" class="profile-quick-contact">(.*?)</div>',txt,re.S)
+            if not m or not (m.group(1).find('LinkedIn') < m.group(1).find('vCard') < m.group(1).find('Wikidata')):
+                issues.append(f'{rel}: {who} quick-link order drift')
+    for rel in ('lukas/index.html','en/lukas/index.html','de/lukas/index.html'):
+        txt=(ROOT/rel).read_text(encoding='utf-8')
+        order=['LinkedIn ↗','vCard','Google Scholar ↗','ORCID 0000-0003-3949-6034 ↗','ResearchGate ↗','Wikidata ↗']
+        pos=[txt.find(x) for x in order]
+        if any(x<0 for x in pos) or pos != sorted(pos): issues.append(f'{rel}: visitor-first professional link order drift')
+    for rel in ('peter/index.html','en/peter/index.html','de/peter/index.html'):
+        txt=(ROOT/rel).read_text(encoding='utf-8')
+        if 'profile-links-bridge' not in txt or 'Q139977167' not in txt: issues.append(f'{rel}: Peter compact identity row missing')
+        if 'orcid.org' in txt.lower() or 'researchgate.net' in txt.lower() or 'scholar.google.com' in txt.lower():
+            issues.append(f'{rel}: artificial academic identity added to Peter')
+    source='https://www.mtf.stuba.sk/buxus/docs/doc/informacie_o/Prehlad_projektov_riesenych_v_r._2015.pdf'
+    for rel in ('projects/index.html','en/projects/index.html','de/projects/index.html','lukas/index.html','en/lukas/index.html','de/lukas/index.html','structured-data/lukas.jsonld'):
+        if source not in (ROOT/rel).read_text(encoding='utf-8'):
+            issues.append(f'{rel}: authoritative MTF 2015 project source missing')
+    if issues:
+        for x in issues: fail('v0.2.5 preview identity reinforcement: '+x)
+    else: ok('v0.2.5 preview homepage/profile identity reinforcement + MTF project source')
+
+
+def check_v025_preview_r3_polish():
+    issues=[]
+    # Profile metadata should lead with the full professional identity and current employer context.
+    expected_titles={
+      'lukas/index.html':'Ing. Lukáš Likavčan, PhD. | Materiálový inžinier | BIZZCOM',
+      'en/lukas/index.html':'Ing. Lukáš Likavčan, PhD. | Materials Engineer | BIZZCOM',
+      'de/lukas/index.html':'Ing. Lukáš Likavčan, PhD. | Werkstoffingenieur | BIZZCOM',
+      'peter/index.html':'Ing. Peter Likavčan | Simulation Specialist | Porsche Werkzeugbau',
+      'en/peter/index.html':'Ing. Peter Likavčan | Simulation Specialist | Porsche Werkzeugbau',
+      'de/peter/index.html':'Ing. Peter Likavčan | Simulation Specialist | Porsche Werkzeugbau',
+    }
+    for rel,want in expected_titles.items():
+        txt=(ROOT/rel).read_text(encoding='utf-8')
+        if f'<title>{want}</title>' not in txt: issues.append(f'{rel}: profile title drift')
+        if '2026-10-16T17:08:00+02:00' not in txt: issues.append(f'{rel}: dateModified not refreshed')
+    sk=(ROOT/'lukas/index.html').read_text(encoding='utf-8')
+    if 'riešeniach pre rôzne aplikácie spájania plastov' not in sk: issues.append('SK Lukáš Branson intro polish missing')
+    projects_sk=(ROOT/'projects/index.html').read_text(encoding='utf-8')
+    if 'Zodpovedný riešiteľ: Ing. Lukáš Likavčan.' not in projects_sk: issues.append('SK SFRT 1341 responsible-researcher wording missing')
+    for rel in ('index.html','en/index.html','de/index.html','lukas/index.html','en/lukas/index.html','de/lukas/index.html','peter/index.html','en/peter/index.html','de/peter/index.html'):
+        txt=(ROOT/rel).read_text(encoding='utf-8')
+        if 'Wikidata ↗' in txt and 'profile-quick-contact__muted-identity' not in txt:
+            issues.append(f'{rel}: muted Wikidata identity styling missing')
+    for rel in ('lukas/index.html','en/lukas/index.html','de/lukas/index.html'):
+        txt=(ROOT/rel).read_text(encoding='utf-8')
+        # ORCID is current again and should be active; ResearchGate remains visually secondary.
+        m=re.search(r'<a(?![^>]*profile-quick-contact__muted-identity)[^>]*href="https://orcid.org/0000-0003-3949-6034"[^>]*>ORCID 0000-0003-3949-6034 ↗</a>',txt)
+        if not m: issues.append(f'{rel}: ORCID is not in the active identity tier')
+        m=re.search(r'<a[^>]*class="[^"]*profile-quick-contact__muted-identity[^"]*"[^>]*href="https://www.researchgate.net/profile/Lukas-Likavcan-2"[^>]*>ResearchGate ↗</a>',txt)
+        if not m: issues.append(f'{rel}: ResearchGate is not visually muted')
+    css=(ROOT/'assets/css/components.css').read_text(encoding='utf-8')
+    if '@media (min-width: 769px)' not in css or 'minmax(220px, 280px)' not in css or 'clamp(3rem, 5vw, 4rem)' not in css:
+        issues.append('desktop-only compact profile hero CSS missing')
+    js=(ROOT/'assets/js/main.js').read_text(encoding='utf-8')
+    for token in ('cookieReturnFocus','showBanner(true,b)','returnFocus.focus()'):
+        if token not in js: issues.append('cookie focus management missing '+token)
+    for rel in ('index.html','en/index.html','de/index.html'):
+        nodes=list(_jsonld_objects(rel))
+        for who,org in (('lukas','https://likavcan.cz/#bizzcom'),('peter','https://likavcan.cz/#porsche-werkzeugbau')):
+            person=next((o for o in nodes if o.get('@type')=='Person' and o.get('@id')==EXPECTED[who]['person_id']),None)
+            if not person: issues.append(f'{rel}: {who} homepage Person stub missing'); continue
+            if person.get('worksFor',{}).get('@id')!=org: issues.append(f'{rel}: {who} worksFor homepage stub missing')
+            if person.get('alumniOf',{}).get('@id')!='https://likavcan.cz/#mtf-stu': issues.append(f'{rel}: {who} alumniOf homepage stub missing')
+            if not person.get('sameAs'): issues.append(f'{rel}: {who} sameAs homepage stub missing')
+    if issues:
+        for x in issues: fail('v0.2.5 Preview R3 polish: '+x)
+    else: ok('v0.2.5 Preview R3 visual/entity/accessibility polish')
+
+
+
+def check_v025_final_identity_precision():
+    issues=[]
+    # Restored ORCID is visible on Lukáš homepage in a compact active label; Peter remains unchanged.
+    for rel in ('index.html','en/index.html','de/index.html'):
+        txt=(ROOT/rel).read_text(encoding='utf-8')
+        m=re.search(r'<div aria-label="Lukáš Likavčan" class="profile-quick-contact">(.*?)</div>',txt,re.S)
+        if not m: issues.append(f'{rel}: Lukáš quick links missing'); continue
+        row=m.group(1)
+        order=['LinkedIn','vCard','ORCID ↗','Wikidata ↗']
+        pos=[row.find(x) for x in order]
+        if any(x<0 for x in pos) or pos != sorted(pos): issues.append(f'{rel}: Lukáš homepage quick-link order drift')
+        if 'ORCID 0000-0003-3949-6034' in row: issues.append(f'{rel}: homepage ORCID should use compact label')
+        if 'profile-quick-contact__muted-identity" href="https://orcid.org/' in row: issues.append(f'{rel}: homepage ORCID incorrectly muted')
+
+    source='https://www.mtf.stuba.sk/buxus/docs/doc/informacie_o/Prehlad_projektov_riesenych_v_r._2015.pdf'
+    profile_expect={
+      'lukas/index.html':('Mladý výskumník / SFRT – projekt č. 1341','Zodpovedný riešiteľ:'),
+      'en/lukas/index.html':('Young Researcher / SFRT – project No. 1341','Responsible researcher:'),
+      'de/lukas/index.html':('Mladý výskumník / SFRT – Projekt Nr. 1341','Projektverantwortlicher:'),
+    }
+    for rel,(title,role) in profile_expect.items():
+        txt=(ROOT/rel).read_text(encoding='utf-8')
+        if title not in txt or role not in txt or source not in txt:
+            issues.append(f'{rel}: visible SFRT 1341 fact/source block missing')
+        if '<time datetime="2015">2015</time>' not in txt:
+            issues.append(f'{rel}: SFRT year lacks machine-readable time')
+
+    # Current/historical chronology must expose machine-readable dates on person profiles.
+    chronology={
+      'lukas/index.html':('datetime="2026-05"','datetime="2017-09"','datetime="2026-04"'),
+      'en/lukas/index.html':('datetime="2026-05"','datetime="2017-09"','datetime="2026-04"'),
+      'de/lukas/index.html':('datetime="2026-05"','datetime="2017-09"','datetime="2026-04"'),
+      'peter/index.html':('datetime="2020-06"','datetime="2018-11"','datetime="2016-07"'),
+      'en/peter/index.html':('datetime="2020-06"','datetime="2018-11"','datetime="2016-07"'),
+      'de/peter/index.html':('datetime="2020-06"','datetime="2018-11"','datetime="2016-07"'),
+    }
+    for rel,tokens in chronology.items():
+        txt=(ROOT/rel).read_text(encoding='utf-8')
+        for token in tokens:
+            if token not in txt: issues.append(f'{rel}: chronology token missing {token}')
+
+    benchmark=(ROOT/'docs/AI-IDENTITY-BENCHMARK-v0.2.5.md').read_text(encoding='utf-8')
+    for token in ('Factual precision guardrails','responsible researcher','Bezpečná elektrika: an independent professional project'):
+        if token not in benchmark: issues.append('AI benchmark precision guardrail missing '+token)
+
+    if issues:
+        for x in issues: fail('v0.2.5 final identity precision: '+x)
+    else: ok('v0.2.5 final ORCID/SFRT chronology and factual-precision guardrails')
 
 def check_release_hygiene():
     bad=[]
@@ -1471,6 +1620,9 @@ def main() -> int:
     check_v024_home_portrait_links()
     check_v024_back_to_top()
     check_v024_deploy_readiness()
+    check_v025_preview_identity_reinforcement()
+    check_v025_preview_r3_polish()
+    check_v025_final_identity_precision()
     check_release_hygiene()
     check_hero_loading()
     check_js()
