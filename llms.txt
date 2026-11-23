@@ -24,7 +24,7 @@
 - Canonical profile: https://likavcan.cz/peter/
 - Person URI: https://likavcan.cz/peter/#peter-likavcan
 - Full name: Ing. Peter Likavčan
-- Job titles: Simulation Specialist; Automation Engineer
+- Job titles: Simulation Specialist
 - Education: MTF STU, Faculty of Materials Science and Technology in Trnava
 - Current organization: Porsche Werkzeugbau GmbH
 - Focus: industrial simulation, automation, robotics, Process Simulate, Virtual Commissioning and Digital Factory

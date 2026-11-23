@@ -1,32 +1,39 @@
-# LIKAVCAN.CZ — TODO after v0.2.5
+# LIKAVCAN.CZ — TODO after v0.2.6
 
 ## Release / production follow-up
-- [ ] Deploy v0.2.5 from the verified final package and run a short production desktop/mobile smoke test.
-- [ ] Verify the live homepage, `/lukas/`, `/peter/`, EN/DE variants, sitemap, ORCID/Wikidata links and Bezpečná elektrika case-study route.
-- [ ] Verify manual Cookie Settings focus entry/return and first-visit consent behavior on production.
-- [ ] Verify the E2/A credential viewer on desktop and Android cold start: first open fit-to-screen, native-size toggle, return to fit, close/Escape behavior.
-- [ ] Complete 200%/400% zoom/reflow spot check.
-- [ ] After successful production smoke, create/push tag `v0.2.5` and publish the GitHub Release.
-- [ ] Request Google Search Console recrawl for materially changed canonical URLs; notify Bing/IndexNow only for genuinely changed URLs.
+- [ ] Deploy v0.2.6 from the verified final package through the existing GitHub Pages `main` workflow.
+- [ ] Verify the live homepage, `/lukas/`, `/peter/`, EN/DE variants, sitemap and feed after deployment.
+- [ ] Verify that the stable Person IDs remain unchanged and that BIZZCOM/Porsche are current while Branson remains historical.
+- [ ] Verify Peter remains `Simulation Specialist` in the live profile/discovery signals and that no authored work is represented as `Person.subjectOf`.
+- [ ] Run the standard production desktop/mobile smoke test, credential-viewer check and a short cookie/keyboard sanity check.
+- [ ] After successful production smoke, create/push immutable tag `v0.2.6` and publish the GitHub Release.
+- [ ] Request recrawl only for materially changed canonical profile URLs; do not repeatedly resubmit unchanged URLs.
 
 ## Post-release observation
-- [ ] Keep a 3–4 week content/metadata freeze unless a real defect is found.
-- [ ] Re-run the eight-query AI identity benchmark after the freeze and compare entity resolution and factual precision.
-- [ ] Watch specifically for SFRT 1341 being described as `zodpovedný riešiteľ` / responsible researcher, not `garant`; keep Branson/BIZZCOM chronology distinct.
+- [ ] Allow time for recrawl/reindexing before attributing any AI/search behaviour to v0.2.6.
+- [ ] Re-run the same identity benchmark prompts after a reasonable indexing interval and compare against the November 2026 baseline.
+- [ ] Watch for downstream model enrichment without automatically treating every hallucination as a website defect.
+- [ ] Preserve the guardrails: one Lukáš Person, Bezpečná elektrika as his project, BIZZCOM current, Branson historical, Peter primarily Simulation Specialist, SFRT role `Zodpovedný riešiteľ`.
 
-## Privacy / infrastructure debt
-- [ ] Verify the actual Google Analytics property retention setting before replacing generic Privacy wording; do not invent the value.
-- [ ] Confirm a direct privacy contact channel only if the owner chooses to publish one.
-- [ ] Review production security headers / redirects at the hosting layer before any infrastructure change.
+## Accessibility / runtime QA debt
+- [ ] Test first-visit cookie focus order in a real browser before changing working JS behaviour.
+- [ ] Measure mobile language-switcher target sizes and spacing in actual rendered layouts.
+- [ ] Repeat 200%/400% zoom and reflow spot checks on production.
+- [ ] Review generic ARIA grouping only as part of a focused accessibility pass, not as an identity-release hotfix.
+
+## vCard / privacy / infrastructure debt
+- [ ] Test the current vCard import on iOS, Android, Google Contacts and Outlook before changing encoding/version format.
+- [ ] Verify the actual Google Analytics retention setting before replacing generic Privacy wording; do not invent the value.
+- [ ] Publish a direct privacy contact channel only if the owner chooses and confirms it.
+- [ ] Keep GitHub Pages + Cloudflare DNS-only unchanged unless a separate infrastructure review demonstrates a real need.
 
 ## External identity authority
-- [ ] Keep current facts synchronized on ORCID, Google Scholar, LinkedIn and Wikidata.
-- [ ] ResearchGate remains a secondary/historical identity unless it is actively recovered and updated.
-- [ ] Seek a natural authoritative BIZZCOM profile/reference for Lukáš and an appropriate employer/profile reference for Peter when available.
-- [ ] Add public source links only when they materially support a current project, education item, publication or professional claim.
+- [ ] Periodically verify that LinkedIn, ORCID, Google Scholar, ResearchGate and Wikidata links still identify the intended person.
+- [ ] Keep institutional evidence URLs out of `Person.sameAs`; use `sameAs` only for identity-equivalent profiles.
+- [ ] Prefer current canonical `likavcan.cz` profiles over retired Google Sites.
+- [ ] Add new external profiles only when they are real, maintained and useful; do not create accounts solely for SEO.
 
 ## Policy / future content
-- [ ] `Google-Extended` remains intentionally allowed for discovery/grounding; revisit only if site policy changes.
-- [ ] Keep institutional evidence URLs out of `Person.sameAs`; use `sameAs` only for identity-equivalent profiles.
-- [ ] Add new visible profile content only for a real new project, publication, role change, relevant credential or substantial technical case study.
-- [ ] Do not introduce Evidence / Authority / Verification sections, namesake-disambiguation copy, keyword stuffing or artificial Lukáš/Peter symmetry.
+- [ ] Add visible content only for a real new project, publication, role change, relevant credential or substantial technical case study.
+- [ ] Do not introduce Evidence / Authority / Verification sections, namesake-disambiguation copy, SEO FAQ, keyword stuffing, employer-logo walls, trust badges or artificial Lukáš/Peter symmetry.
+- [ ] Keep human-facing presentation primary and machine/entity optimization mostly invisible.

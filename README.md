@@ -33,11 +33,11 @@ https://likavcan.cz
 
 ## Current release
 
-**v0.2.5 — Human-first Identity & Factual Precision**
+**v0.2.6 — Entity clarity & Identity consistency**
 
-Conservative profile and entity-identity update built on the v0.2.4 production baseline. The release keeps the existing visual language and homepage headline, improves role/employer context and profile metadata, restores ORCID to Lukáš’s active identity tier, adds the source-backed SFRT 1341 project to his profile, refines Branson wording around plastics-joining applications, reduces desktop profile-hero scale, improves Cookie Settings focus handling, exposes machine-readable chronology, restores a natural internal route to the Bezpečná elektrika case study, and synchronizes sitemap/feed freshness. Stable Person IDs and the existing `WebSite` + `WebPage` homepage graph remain unchanged.
+Conservative structured-data and identity-consistency release built on the verified v0.2.5 production baseline. The visible design and human-facing profile copy remain essentially unchanged. The release narrows professional classifications where secondary labels could create identity drift, keeps Peter primarily as `Simulation Specialist`, preserves Lukáš’s materials/R&D identity, corrects `author`/`subjectOf` semantics for authored works, aligns Peter’s discovery/vCard title, and strengthens regression guardrails for stable entity IDs, portraits, country context, employer chronology, project identity and authorship.
 
-Automated release baseline is **52 PASS / 0 FAIL**. After deploy, run the normal production desktop/mobile smoke test, credential-viewer check, cookie-focus check and 200%/400% zoom/reflow spot check before tagging the release.
+Candidate R2 was independently verified at **54 PASS / 0 FAIL** with no release-blocking findings. The final deploy package adds only internal release-documentation/configuration hygiene on top of the verified R2 public-site payload. Run the release regression again before commit, then perform production smoke checks before creating immutable tag `v0.2.6`.
 
 ## Long-term releases
 

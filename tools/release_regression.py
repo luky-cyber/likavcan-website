@@ -737,7 +737,7 @@ def check_v023_rc2_chronology():
         m=re.search(r'<section[^>]*id="education".*?<div class="grid education-grid">(.*?)</div>\s*</div>\s*</section>',txt,re.S)
         if not m:
             issues.append(f'{rel}: education grid not found'); continue
-        years=re.findall(r'<span class="badge">\s*(?:<time[^>]*>)?(2026|2017|2013|2011)(?:</time>)?\s*</span>',m.group(1))
+        years=re.findall(r'<span class="badge">\s*(?:<time datetime="(?:2026|2017|2013|2011)">)?(2026|2017|2013|2011)(?:</time>)?\s*</span>',m.group(1))
         if years[:4] != ['2026','2017','2013','2011']:
             issues.append(f'{rel}: education order {years[:4]!r}')
     for rel in ('projects/index.html','en/projects/index.html','de/projects/index.html'):
@@ -940,7 +940,7 @@ def check_v023_rc4_compact_desktop_and_education():
         if 'class="grid education-grid"' not in txt: issues.append(f'{rel}: education-grid hook missing')
         if 'credential-card__preview' in txt or 'osvedcenie-e2a-lukas-likavcan-verejna-kopia-preview.webp' in txt:
             issues.append(f'{rel}: credential thumbnail remains')
-        years=re.findall(r'<span class="badge">\s*(?:<time[^>]*>)?(2026|2017|2013|2011)(?:</time>)?\s*</span>', txt[txt.find('id="education"'):txt.find('id="expertise"')])
+        years=re.findall(r'<span class="badge">\s*(?:<time datetime="(?:2026|2017|2013|2011)">)?(2026|2017|2013|2011)(?:</time>)?\s*</span>', txt[txt.find('id="education"'):txt.find('id="expertise"')])
         if years[:4] != ['2026','2017','2013','2011']:
             issues.append(f'{rel}: education order {years[:4]!r}')
     data=json.loads((ROOT/'structured-data/lukas.jsonld').read_text(encoding='utf-8'))
@@ -1047,16 +1047,16 @@ def check_v024_integrated_sources():
     sitemap=(ROOT/'sitemap.xml').read_text(encoding='utf-8')
     profile_urls=('/lukas/','/peter/','/en/lukas/','/en/peter/','/de/lukas/','/de/peter/')
     changed_project_indexes=('/projects/','/en/projects/','/de/projects/')
-    changed_publications=('/publications/','/en/publications/','/de/publications/')
+    unchanged_publications=('/publications/','/en/publications/','/de/publications/')
     for url in profile_urls:
-        if f'<loc>https://likavcan.cz{url}</loc>\n    <lastmod>2026-10-16</lastmod>' not in sitemap:
+        if f'<loc>https://likavcan.cz{url}</loc>\n    <lastmod>2026-11-22</lastmod>' not in sitemap:
             issues.append(f'sitemap profile lastmod not updated for {url}')
     for url in changed_project_indexes:
         if f'<loc>https://likavcan.cz{url}</loc>\n    <lastmod>2026-10-16</lastmod>' not in sitemap:
             issues.append(f'sitemap changed project-index lastmod drift for {url}')
-    for url in changed_publications:
+    for url in unchanged_publications:
         if f'<loc>https://likavcan.cz{url}</loc>\n    <lastmod>2026-10-16</lastmod>' not in sitemap:
-            issues.append(f'sitemap changed publications lastmod drift for {url}')
+            issues.append(f'sitemap unchanged publications lastmod drift for {url}')
 
     registry=(ROOT/'docs/evidence-registry-v0.2.4.md')
     if not registry.exists() or '2012_prosp_stip_web_2bc_zoznam.pdf' not in registry.read_text(encoding='utf-8'):
@@ -1413,7 +1413,7 @@ def check_v024_deploy_readiness():
     for rel in ('lukas/index.html','en/lukas/index.html','de/lukas/index.html','peter/index.html','en/peter/index.html','de/peter/index.html'):
         objs=_jsonld_objects(rel)
         pages=[o for o in objs if o.get('@type')=='ProfilePage']
-        if len(pages)!=1 or pages[0].get('dateModified')!='2026-10-16T17:08:00+02:00':
+        if len(pages)!=1 or pages[0].get('dateModified')!='2026-11-22T20:21:00+01:00':
             issues.append(f'{rel}: final ProfilePage dateModified drift')
 
     if issues:
@@ -1475,7 +1475,7 @@ def check_v025_preview_r3_polish():
     for rel,want in expected_titles.items():
         txt=(ROOT/rel).read_text(encoding='utf-8')
         if f'<title>{want}</title>' not in txt: issues.append(f'{rel}: profile title drift')
-        if '2026-10-16T17:08:00+02:00' not in txt: issues.append(f'{rel}: dateModified not refreshed')
+        if '2026-11-22T20:21:00+01:00' not in txt: issues.append(f'{rel}: dateModified not refreshed')
     sk=(ROOT/'lukas/index.html').read_text(encoding='utf-8')
     if 'riešeniach pre rôzne aplikácie spájania plastov' not in sk: issues.append('SK Lukáš Branson intro polish missing')
     projects_sk=(ROOT/'projects/index.html').read_text(encoding='utf-8')
@@ -1486,7 +1486,6 @@ def check_v025_preview_r3_polish():
             issues.append(f'{rel}: muted Wikidata identity styling missing')
     for rel in ('lukas/index.html','en/lukas/index.html','de/lukas/index.html'):
         txt=(ROOT/rel).read_text(encoding='utf-8')
-        # ORCID is current again and should be active; ResearchGate remains visually secondary.
         m=re.search(r'<a(?![^>]*profile-quick-contact__muted-identity)[^>]*href="https://orcid.org/0000-0003-3949-6034"[^>]*>ORCID 0000-0003-3949-6034 ↗</a>',txt)
         if not m: issues.append(f'{rel}: ORCID is not in the active identity tier')
         m=re.search(r'<a[^>]*class="[^"]*profile-quick-contact__muted-identity[^"]*"[^>]*href="https://www.researchgate.net/profile/Lukas-Likavcan-2"[^>]*>ResearchGate ↗</a>',txt)
@@ -1513,7 +1512,6 @@ def check_v025_preview_r3_polish():
 
 def check_v025_final_identity_precision():
     issues=[]
-    # Restored ORCID is visible on Lukáš homepage in a compact active label; Peter remains unchanged.
     for rel in ('index.html','en/index.html','de/index.html'):
         txt=(ROOT/rel).read_text(encoding='utf-8')
         m=re.search(r'<div aria-label="Lukáš Likavčan" class="profile-quick-contact">(.*?)</div>',txt,re.S)
@@ -1538,7 +1536,6 @@ def check_v025_final_identity_precision():
         if '<time datetime="2015">2015</time>' not in txt:
             issues.append(f'{rel}: SFRT year lacks machine-readable time')
 
-    # Current/historical chronology must expose machine-readable dates on person profiles.
     chronology={
       'lukas/index.html':('datetime="2026-05"','datetime="2017-09"','datetime="2026-04"'),
       'en/lukas/index.html':('datetime="2026-05"','datetime="2017-09"','datetime="2026-04"'),
@@ -1555,7 +1552,6 @@ def check_v025_final_identity_precision():
     benchmark=(ROOT/'docs/AI-IDENTITY-BENCHMARK-v0.2.5.md').read_text(encoding='utf-8')
     for token in ('Factual precision guardrails','responsible researcher','Bezpečná elektrika: an independent professional project'):
         if token not in benchmark: issues.append('AI benchmark precision guardrail missing '+token)
-
     if issues:
         for x in issues: fail('v0.2.5 final identity precision: '+x)
     else: ok('v0.2.5 final ORCID/SFRT chronology and factual-precision guardrails')
@@ -1564,23 +1560,199 @@ def check_v025_release_documentation_hygiene():
     issues=[]
     config=(ROOT/'_config.yml').read_text(encoding='utf-8')
     for rel in ('PREVIEW-NOTES-v0.2.5.md','RELEASE-v0.2.5.md','FINAL-AUDIT-v0.2.5.md'):
+        if not (ROOT/rel).exists():
+            issues.append(f'{rel} missing from release history')
         if f'  - {rel}' not in config:
             issues.append(f'_config.yml: {rel} is not excluded from Jekyll output')
-    readme=(ROOT/'README.md').read_text(encoding='utf-8')
-    if '**v0.2.5 — Human-first Identity & Factual Precision**' not in readme:
-        issues.append('README current release is not v0.2.5')
-    if '52 PASS / 0 FAIL' not in readme:
-        issues.append('README regression baseline is not 52 PASS / 0 FAIL')
-    todo=(ROOT/'TODO.md').read_text(encoding='utf-8')
-    if not todo.startswith('# LIKAVCAN.CZ — TODO after v0.2.5'):
-        issues.append('TODO is not in post-v0.2.5 state')
-    preview=(ROOT/'PREVIEW-NOTES-v0.2.5.md').read_text(encoding='utf-8')
+    audit=(ROOT/'FINAL-AUDIT-v0.2.5.md').read_text(encoding='utf-8') if (ROOT/'FINAL-AUDIT-v0.2.5.md').exists() else ''
+    if '`52 PASS / 0 FAIL`' not in audit:
+        issues.append('FINAL-AUDIT-v0.2.5.md regression baseline missing')
+    preview=(ROOT/'PREVIEW-NOTES-v0.2.5.md').read_text(encoding='utf-8') if (ROOT/'PREVIEW-NOTES-v0.2.5.md').exists() else ''
     if 'Historical preview log:' not in preview:
         issues.append('preview notes do not mark superseded early-round state as historical')
     if issues:
         for x in issues: fail('v0.2.5 release documentation hygiene: '+x)
-    else: ok('v0.2.5 Jekyll exclusions and release documentation state')
+    else: ok('v0.2.5 historical release documentation remains preserved/excluded')
 
+
+def check_v026_release_documentation_hygiene():
+    issues=[]
+    config=(ROOT/'_config.yml').read_text(encoding='utf-8')
+    for rel in ('RELEASE-v0.2.6.md','FINAL-AUDIT-v0.2.6.md'):
+        if not (ROOT/rel).exists():
+            issues.append(f'{rel} missing from final package')
+        if f'  - {rel}' not in config:
+            issues.append(f'_config.yml: {rel} is not excluded from Jekyll output')
+    readme=(ROOT/'README.md').read_text(encoding='utf-8')
+    if '**v0.2.6 — Entity clarity & Identity consistency**' not in readme:
+        issues.append('README current release is not v0.2.6')
+    todo=(ROOT/'TODO.md').read_text(encoding='utf-8')
+    if not todo.startswith('# LIKAVCAN.CZ — TODO after v0.2.6'):
+        issues.append('TODO is not in post-v0.2.6 state')
+    release=(ROOT/'RELEASE-v0.2.6.md').read_text(encoding='utf-8') if (ROOT/'RELEASE-v0.2.6.md').exists() else ''
+    audit=(ROOT/'FINAL-AUDIT-v0.2.6.md').read_text(encoding='utf-8') if (ROOT/'FINAL-AUDIT-v0.2.6.md').exists() else ''
+    if 'Entity clarity & identity consistency' not in release:
+        issues.append('RELEASE-v0.2.6.md scope marker missing')
+    if '54 PASS / 0 FAIL' not in audit or '0 release-blocking problems' not in audit:
+        issues.append('FINAL-AUDIT-v0.2.6.md does not record independent R2 verification')
+    if issues:
+        for x in issues: fail('v0.2.6 release documentation hygiene: '+x)
+    else: ok('v0.2.6 Jekyll exclusions and final release documentation state')
+
+
+def check_v026_entity_clarity_candidate():
+    issues=[]
+    home_files=('index.html','en/index.html','de/index.html')
+    profile_files=('lukas/index.html','en/lukas/index.html','de/lukas/index.html','peter/index.html','en/peter/index.html','de/peter/index.html')
+    for rel in home_files+profile_files:
+        objs=list(_jsonld_objects(rel))
+        persons=[o for o in objs if o.get('@type')=='Person']
+        for person in persons:
+            pid=person.get('@id','')
+            if pid not in (EXPECTED['lukas']['person_id'],EXPECTED['peter']['person_id']):
+                issues.append(f'{rel}: unexpected/parallel Person id {pid}')
+            nat=person.get('nationality')
+            if not isinstance(nat,dict) or nat.get('name')!='Slovakia':
+                issues.append(f'{rel}: {pid} lacks explicit Slovakia nationality')
+            same=person.get('sameAs',[]); same=[same] if isinstance(same,str) else same
+            if any('sites.google.com' in str(x) for x in same):
+                issues.append(f'{rel}: retired Google Sites URL present in Person.sameAs')
+            if pid==EXPECTED['peter']['person_id']:
+                jt=person.get('jobTitle',[]); jt=[jt] if isinstance(jt,str) else jt
+                if jt != ['Simulation Specialist']:
+                    issues.append(f'{rel}: Peter jobTitle not kept canonical/narrow: {jt!r}')
+                occ=person.get('hasOccupation')
+                if occ is not None:
+                    names=[x.get('name') for x in occ if isinstance(x,dict)]
+                    if names != ['Simulation Specialist']:
+                        issues.append(f'{rel}: Peter hasOccupation broadened: {names!r}')
+            if pid==EXPECTED['lukas']['person_id'] and person.get('hasOccupation'):
+                names=[x.get('name') for x in person.get('hasOccupation',[]) if isinstance(x,dict)]
+                if 'Polymer Engineer' in names:
+                    issues.append(f'{rel}: secondary Polymer Engineer occupation retained')
+                know=person.get('knowsAbout',[])
+                electrical=[x for x in know if isinstance(x,str) and x in ('Electrical safety','Electrical installations','Electrical inspection and testing','Electrical measurements','Residual current protection','Lightning protection systems')]
+                if electrical != ['Electrical safety','Electrical measurements']:
+                    issues.append(f'{rel}: electrical expertise is broader than the complementary visible scope: {electrical!r}')
+
+    # Canonical portrait signals remain explicit and person-specific; do not replace them with social artwork.
+    for rel,slug in (('lukas/index.html','lukas'),('en/lukas/index.html','lukas'),('de/lukas/index.html','lukas'),('peter/index.html','peter'),('en/peter/index.html','peter'),('de/peter/index.html','peter')):
+        objs=list(_jsonld_objects(rel)); pid=EXPECTED[slug]['person_id']
+        person=next((o for o in objs if o.get('@type')=='Person' and o.get('@id')==pid),None)
+        if not person: continue
+        raw=json.dumps(person.get('image'),ensure_ascii=False)
+        want=f'https://likavcan.cz/assets/img/profiles/{slug}-likavcan.webp'
+        if want not in raw: issues.append(f'{rel}: canonical {slug} portrait missing from Person.image')
+        page=next((o for o in objs if o.get('@type')=='ProfilePage'),None)
+        if not page or want not in json.dumps(page.get('primaryImageOfPage'),ensure_ascii=False):
+            issues.append(f'{rel}: ProfilePage primary image is not the canonical {slug} portrait')
+        if not page or page.get('dateModified')!='2026-11-22T20:21:00+01:00':
+            issues.append(f'{rel}: candidate dateModified drift')
+
+    # BIZZCOM and MTF country context should be explicit without publishing a personal/local address.
+    for rel in home_files+('lukas/index.html','en/lukas/index.html','de/lukas/index.html'):
+        objs=list(_jsonld_objects(rel))
+        for oid in ('https://likavcan.cz/#mtf-stu','https://likavcan.cz/#bizzcom'):
+            node=next((o for o in objs if o.get('@id')==oid and o.get('@type') in ('Organization','CollegeOrUniversity')),None)
+            if node and node.get('address',{}).get('addressCountry')!='SK':
+                issues.append(f'{rel}: {oid} lacks minimal SK country context')
+
+    # Human-facing invariants: no namesake/SEO warning copy introduced.
+    forbidden=('not the philosopher','nezamieňať s filozofom','nicht mit dem Philosophen','Who is Lukáš Likavčan')
+    for rel in home_files+profile_files:
+        txt=(ROOT/rel).read_text(encoding='utf-8')
+        if any(x.lower() in txt.lower() for x in forbidden): issues.append(f'{rel}: visible namesake/SEO disambiguation copy introduced')
+
+    if issues:
+        for x in issues: fail('v0.2.6 entity clarity candidate: '+x)
+    else: ok('v0.2.6 entity/image/country/job-title precision guardrails')
+
+
+def check_v026_semantic_authorship_consistency():
+    """Guard the narrow R2 fixes: author/subject semantics and Peter title consistency."""
+    issues=[]
+    article_title='Using Sodium Hydrogen Carbonate for Foaming Polymers'
+    thesis_title='Návrh simulačného modelu robotickej bunky s využitím signálneho riadenia v prostredí Process Simulate modul Virtual Commissioning'
+
+    def html_top_graph(rel: str):
+        doc=DocParser(); doc.feed((ROOT/rel).read_text(encoding='utf-8'))
+        out=[]
+        for raw in doc.jsonld:
+            data=json.loads(raw)
+            graph=data.get('@graph') if isinstance(data,dict) else None
+            if isinstance(graph,list):
+                out.extend(x for x in graph if isinstance(x,dict))
+            elif isinstance(data,dict):
+                out.append(data)
+        return out
+
+    def standalone_graph(rel: str):
+        data=json.loads((ROOT/rel).read_text(encoding='utf-8'))
+        graph=data.get('@graph') if isinstance(data,dict) else None
+        return [x for x in (graph or []) if isinstance(x,dict)]
+
+    # Lukáš: authored paper must not be modelled as a work about the Person.
+    for rel in ('lukas/index.html','en/lukas/index.html','de/lukas/index.html'):
+        graph=html_top_graph(rel)
+        person=next((o for o in graph if o.get('@type')=='Person' and o.get('@id')==EXPECTED['lukas']['person_id']),None)
+        if not person:
+            issues.append(f'{rel}: canonical Lukáš Person missing')
+            continue
+        if article_title in json.dumps(person.get('subjectOf',[]),ensure_ascii=False):
+            issues.append(f'{rel}: authored paper remains in Person.subjectOf')
+    graph=standalone_graph('structured-data/lukas.jsonld')
+    person=next((o for o in graph if o.get('@type')=='Person' and o.get('@id')==EXPECTED['lukas']['person_id']),None)
+    if not person or article_title in json.dumps(person.get('subjectOf',[]),ensure_ascii=False):
+        issues.append('structured-data/lukas.jsonld: authored paper remains in Person.subjectOf or Person missing')
+
+    # Preserve the canonical publication entity and all five coauthors.
+    expected_named={'Lukáš Satin','Miroslav Košík','Peter Rantuch','Jozef Bílik'}
+    for rel in ('publications/index.html','en/publications/index.html','de/publications/index.html'):
+        articles=[o for o in _jsonld_objects(rel) if o.get('@type')=='ScholarlyArticle' and o.get('name')==article_title]
+        if len(articles)!=1:
+            issues.append(f'{rel}: expected one canonical foaming-paper ScholarlyArticle, got {len(articles)}')
+            continue
+        authors=articles[0].get('author',[]); authors=[authors] if isinstance(authors,dict) else authors
+        ids={a.get('@id') for a in authors if isinstance(a,dict) and a.get('@id')}
+        names={a.get('name') for a in authors if isinstance(a,dict) and a.get('name')}
+        if EXPECTED['lukas']['person_id'] not in ids or not expected_named.issubset(names) or len(authors)!=5:
+            issues.append(f'{rel}: foaming-paper coauthor model drift')
+
+    # Peter: thesis is a standalone authored CreativeWork, not Person.subjectOf.
+    for rel in ('peter/index.html','en/peter/index.html','de/peter/index.html'):
+        graph=html_top_graph(rel)
+        person=next((o for o in graph if o.get('@type')=='Person' and o.get('@id')==EXPECTED['peter']['person_id']),None)
+        if not person:
+            issues.append(f'{rel}: canonical Peter Person missing')
+            continue
+        if thesis_title in json.dumps(person.get('subjectOf',[]),ensure_ascii=False):
+            issues.append(f'{rel}: thesis remains in Person.subjectOf')
+        works=[o for o in graph if o.get('@type')=='CreativeWork' and o.get('name')==thesis_title]
+        if len(works)!=1 or works[0].get('author',{}).get('@id')!=EXPECTED['peter']['person_id']:
+            issues.append(f'{rel}: standalone authored thesis CreativeWork missing or incorrect')
+    graph=standalone_graph('structured-data/peter.jsonld')
+    person=next((o for o in graph if o.get('@type')=='Person' and o.get('@id')==EXPECTED['peter']['person_id']),None)
+    works=[o for o in graph if o.get('@type')=='CreativeWork' and o.get('name')==thesis_title]
+    if not person or thesis_title in json.dumps(person.get('subjectOf',[]),ensure_ascii=False):
+        issues.append('structured-data/peter.jsonld: thesis remains in Person.subjectOf or Person missing')
+    if len(works)!=1 or works[0].get('author',{}).get('@id')!=EXPECTED['peter']['person_id']:
+        issues.append('structured-data/peter.jsonld: standalone authored thesis CreativeWork missing or incorrect')
+
+    # Peter's primary title must be identical in discovery text and vCard.
+    llms=(ROOT/'llms.txt').read_text(encoding='utf-8')
+    if '- Job titles: Simulation Specialist\n' not in llms:
+        issues.append('llms.txt: Peter canonical job-title line missing')
+    if '- Job titles: Simulation Specialist; Automation Engineer' in llms:
+        issues.append('llms.txt: secondary Automation Engineer job title remains')
+    vcard=(ROOT/'peter/peter-likavcan.vcf').read_bytes()
+    if b'\r\nTITLE:Simulation Specialist\r\n' not in vcard:
+        issues.append('Peter vCard: canonical TITLE:Simulation Specialist missing')
+    if b'Industrial Simulation and Automation Specialist' in vcard:
+        issues.append('Peter vCard: broadened legacy TITLE remains')
+
+    if issues:
+        for x in issues: fail('v0.2.6 R2 semantic identity: '+x)
+    else: ok('v0.2.6 R2 author/subjectOf and Peter title consistency')
 
 def check_release_hygiene():
     bad=[]
@@ -1646,6 +1818,9 @@ def main() -> int:
     check_v025_preview_r3_polish()
     check_v025_final_identity_precision()
     check_v025_release_documentation_hygiene()
+    check_v026_release_documentation_hygiene()
+    check_v026_entity_clarity_candidate()
+    check_v026_semantic_authorship_consistency()
     check_release_hygiene()
     check_hero_loading()
     check_js()
